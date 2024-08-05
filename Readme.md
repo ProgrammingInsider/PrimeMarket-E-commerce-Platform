@@ -42,7 +42,7 @@ PrimeMarket features a separate client (frontend) and server (backend) codebase 
 ### Prerequisites
 
 - Node.js (LTS version recommended)
-- Docker (for containerization) if
+- Docker (for containerization) if want to use Docker image
 
 ### Steps
 
