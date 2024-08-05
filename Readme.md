@@ -49,8 +49,8 @@ PrimeMarket features a separate client (frontend) and server (backend) codebase 
 1. **Clone the Repository**
 
     ```bash
-    git clone https://github.com/yourusername/primemarket-ecommerce.git
-    cd primemarket-ecommerce
+    https://github.com/ProgrammingInsider/PrimeMarket-E-commerce-Platform.git
+    cd PrimeMarket-E-commerce-Platform
     ```
 
 2. **Install Dependencies**
