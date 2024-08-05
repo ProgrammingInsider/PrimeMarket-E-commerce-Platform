@@ -1,0 +1,195 @@
+{
+  "status": true,
+  "results": [
+    {
+      "_id": "669bdc403377976616749e11",
+      "category_name": "Automotives",
+      "slug": "automotive",
+      "description": "Everything you need for your vehicle.",
+      "parent_category": null,
+      "image_url": null,
+      "depth_level": 1,
+      "path": "automotive",
+      "metadata": {},
+      "is_active": true,
+      "createdAt": "2024-07-20T15:48:16.264Z",
+      "updatedAt": "2024-07-20T15:48:16.264Z",
+      "__v": 0
+    },
+    {
+      "_id": "669bdd0d3377976616749e1e",
+      "category_name": "Car Care",
+      "slug": "car-care",
+      "description": "Products to maintain and clean your car.",
+      "parent_category": "669bdc403377976616749e11",
+      "image_url": null,
+      "depth_level": 2,
+      "path": "automotive/car-care",
+      "metadata": {},
+      "is_active": true,
+      "createdAt": "2024-07-20T15:51:41.639Z",
+      "updatedAt": "2024-07-20T15:51:41.639Z",
+      "__v": 0
+    },
+    {
+      "_id": "669bdc8b3377976616749e14",
+      "category_name": "Car Electronics",
+      "slug": "car-electronics",
+      "description": "Electronic gadgets and accessories for cars.",
+      "parent_category": "669bdc403377976616749e11",
+      "image_url": null,
+      "depth_level": 2,
+      "path": "automotive/car-electronics",
+      "metadata": {},
+      "is_active": true,
+      "createdAt": "2024-07-20T15:49:31.096Z",
+      "updatedAt": "2024-07-20T15:49:31.096Z",
+      "__v": 0
+    },
+    {
+      "_id": "669bdcb93377976616749e18",
+      "category_name": "Exterior Accessories",
+      "slug": "exterior-accessories",
+      "description": "Accessories for the exterior of your car.",
+      "parent_category": "669bdc403377976616749e11",
+      "image_url": null,
+      "depth_level": 2,
+      "path": "automotive/exterior-accessories",
+      "metadata": {},
+      "is_active": true,
+      "createdAt": "2024-07-20T15:50:17.129Z",
+      "updatedAt": "2024-07-20T15:50:17.129Z",
+      "__v": 0
+    },
+    {
+      "_id": "669bdce23377976616749e1b",
+      "category_name": "Interior Accessories",
+      "slug": "interior-accessories",
+      "description": "Accessories for the interior of your car.",
+      "parent_category": "669bdc403377976616749e11",
+      "image_url": null,
+      "depth_level": 2,
+      "path": "automotive/interior-accessories",
+      "metadata": {},
+      "is_active": true,
+      "createdAt": "2024-07-20T15:50:58.651Z",
+      "updatedAt": "2024-07-20T15:50:58.651Z",
+      "__v": 0
+    },
+    {
+      "_id": "669bd6d73377976616749deb",
+      "category_name": "Beauty & Health",
+      "slug": "beauty-health",
+      "description": "Beauty and health products",
+      "parent_category": null,
+      "image_url": null,
+      "depth_level": 1,
+      "path": "beauty-health",
+      "metadata": {
+        "icon": "beauty-health-icon"
+      },
+      "is_active": true,
+      "createdAt": "2024-07-20T15:25:11.173Z",
+      "updatedAt": "2024-07-20T15:25:11.173Z",
+      "__v": 0
+    },
+    {
+      "_id": "669bd89d3377976616749df8",
+      "category_name": "Fragrances",
+      "slug": "fragrances",
+      "description": "Perfumes and colognes for all occasions.",
+      "parent_category": "669bd6d73377976616749deb",
+      "image_url": null,
+      "depth_level": 2,
+      "path": "beauty-health/fragrances",
+      "metadata": {},
+      "is_active": true,
+      "createdAt": "2024-07-20T15:32:45.043Z",
+      "updatedAt": "2024-07-20T15:32:45.043Z",
+      "__v": 0
+    },
+    {
+      "_id": "669bd8393377976616749df2",
+      "category_name": "Hair Care",
+      "slug": "hair-care",
+      "description": "Products for maintaining and styling hair.",
+      "parent_category": "669bd6d73377976616749deb",
+      "image_url": null,
+      "depth_level": 2,
+      "path": "beauty-health/hair-care",
+      "metadata": {},
+      "is_active": true,
+      "createdAt": "2024-07-20T15:31:05.360Z",
+      "updatedAt": "2024-07-20T15:31:05.360Z",
+      "__v": 0
+    },
+    {
+      "_id": "669bd2dc3377976616749db0",
+      "category_name": "Electronics",
+      "slug": "electronics",
+      "description": "All kinds of electronic devices and accessories",
+      "parent_category": null,
+      "image_url": null,
+      "depth_level": 1,
+      "path": "electronics",
+      "metadata": {
+        "icon": "electronics-icon"
+      },
+      "is_active": true,
+      "createdAt": "2024-07-20T15:08:12.960Z",
+      "updatedAt": "2024-07-20T15:08:12.960Z",
+      "__v": 0
+    },
+    {
+      "_id": "669bd3bc3377976616749db9",
+      "category_name": "Cameras",
+      "slug": "cameras",
+      "description": "Digital cameras and accessories",
+      "parent_category": "669bd2dc3377976616749db0",
+      "image_url": null,
+      "depth_level": 2,
+      "path": "electronics/cameras",
+      "metadata": {
+        "icon": "cameras-icon"
+      },
+      "is_active": true,
+      "createdAt": "2024-07-20T15:11:56.140Z",
+      "updatedAt": "2024-07-20T15:11:56.140Z",
+      "__v": 0
+    },
+    {
+      "_id": "669bd33d3377976616749db3",
+      "category_name": "Smartphones",
+      "slug": "smartphones",
+      "description": "Top-quality smartphones",
+      "parent_category": "669bd2dc3377976616749db0",
+      "image_url": null,
+      "depth_level": 2,
+      "path": "electronics/smartphones",
+      "metadata": {
+        "icon": "phones-icon"
+      },
+      "is_active": true,
+      "createdAt": "2024-07-20T15:13:44.684Z",
+      "updatedAt": "2024-07-20T15:13:44.684Z",
+      "__v": 0
+    },
+    {
+      "_id": "669bd4283377976616749fe1",
+      "category_name": "Laptops",
+      "slug": "laptops",
+      "description": "Top-quality laptops",
+      "parent_category": "669bd2dc3377976616749db0",
+      "image_url": null,
+      "depth_level": 2,
+      "path": "electronics/laptops",
+      "metadata": {
+        "icon": "laptops-icon"
+      },
+      "is_active": true,
+      "createdAt": "2024-07-20T15:13:44.684Z",
+      "updatedAt": "2024-07-20T15:13:44.684Z",
+      "__v": 0
+    }
+  ]
+}

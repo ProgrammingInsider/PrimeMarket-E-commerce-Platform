@@ -1,0 +1,184 @@
+/* src/assets/styles/global.css */
+
+@import "./variables.css";
+
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set up base typography */
+body {
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 400; /* Regular weight */
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+p {
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+/* Global link styles */
+a,
+Link {
+  color: var(--hyperlink-color);
+  text-decoration: none;
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 500; /* Medium weight */
+}
+
+a:hover,
+Link:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 700; /* Bold weight */
+  color: var(--heading-color);
+}
+
+h1 {
+  font-weight: 900; /* Heavy weight for main heading */
+}
+
+h2 {
+  font-weight: 700; /* Bold weight for subheading */
+}
+
+em,
+.italic {
+  font-family: "Amazon Ember", sans-serif;
+  font-style: italic;
+}
+
+strong,
+b {
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 700; /* Bold weight for strong text */
+}
+
+.mainSection1 {
+  background-color: var(--section-color);
+  min-height: 30px;
+}
+
+.section {
+  width: 95%;
+  max-width: 1400px;
+  padding: 40px 0;
+  margin: 10px auto;
+}
+
+.sectionHeader {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.barsAnimation {
+  width: 60px;
+  height: 30px;
+}
+
+/* Alert Styles */
+.alert {
+  position: fixed;
+  border-radius: 5px;
+  top: 5px;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 100000;
+}
+
+.showAlert {
+  width: auto;
+  padding: 0.5em 1em;
+  right: 5px;
+  animation: animateShowAlert 1.5s normal;
+}
+
+.hideAlert {
+  width: auto;
+  padding: 0.5em 1em;
+  right: 5px;
+  opacity: 0;
+  animation: animateHideAlert 1.5s normal;
+}
+
+@keyframes animateShowAlert {
+  0% {
+    right: -100px;
+  }
+  50% {
+    right: 10px;
+  }
+  100% {
+    right: 5px;
+  }
+}
+
+@keyframes animateHideAlert {
+  0% {
+    right: 5px;
+  }
+  50% {
+    right: 10px;
+  }
+  100% {
+    right: -200px;
+  }
+}
+
+.successAlert,
+.warningAlert,
+.errorAlert {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+.successAlert {
+  background-color: var(--success-color);
+}
+
+.warningAlert {
+  background-color: var(--warning-color);
+}
+
+.errorAlert {
+  background-color: var(--error-color);
+}
+
+.notFoundText {
+  padding: 16px;
+  font-size: 1.5rem;
+}
+
+.circleLoader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  border-radius: 8px;
+}
+
+.circleLoaderWithBg {
+  background-color: rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,215 @@
+/* UserPage.module.css */
+.userHeader {
+  background-color: transparent;
+  margin: auto;
+  padding: 8px 16px;
+  min-height: 50vh;
+}
+/* Container for user information */
+.userInformationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 0.5em;
+  position: relative;
+  z-index: 10;
+  min-height: 20vh;
+}
+
+/* User information section */
+.userInformation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* General styling for paragraph elements */
+.userInformation p {
+  margin-top: 0.5em;
+}
+
+/* Username, location, and user ID styles */
+.username,
+.location,
+.copyUserId {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+}
+
+/* Username styling */
+.username {
+  gap: 0.3em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  text-align: center;
+}
+
+/* Firstname and Lastname styles */
+.firstname,
+.lastname {
+  display: inline-block;
+}
+
+/* User ID styling */
+.copyUserId {
+  font-size: 14px;
+  color: var(--label-color);
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.copyToClipboard {
+  margin-left: 5px;
+  cursor: pointer;
+  color: var(--label-color);
+}
+
+/* Location styling */
+.location {
+  font-size: 16px;
+  color: var(--text-color);
+  margin-top: 5px;
+}
+
+/* Button container */
+.btnContainer {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* General button styles */
+.userBtn {
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+/* Button hover effect */
+.userBtn:hover {
+  background-color: var(--icon-hover-color);
+}
+
+/* Create Product button styles */
+.createProductBtn {
+  background-color: var(--primary-color);
+}
+
+/* Copy to Clipboard icon styles */
+.copyToClipboard {
+  margin-left: 0.5em;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--icon-color);
+}
+
+/* Copy to Clipboard icon hover effect */
+.copyToClipboard:hover {
+  color: var(--icon-hover-color);
+}
+
+.userBtn:hover {
+  opacity: 0.8;
+}
+
+/* Responsive styles for larger screens */
+@media screen and (min-width: 480px) {
+  .userInformationContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+  .username,
+  .location,
+  .copyUserId {
+    text-align: left;
+  }
+
+  .userInformation {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .btnContainer {
+    flex-direction: row;
+  }
+
+  .createProductBtn {
+    margin-right: 1em;
+    margin-bottom: 0;
+  }
+}
+
+.productSection {
+  margin-top: 1em;
+  padding: 0;
+}
+
+/* Header of the section */
+.sectionHeader {
+  border-bottom: 1px solid var(--border-color);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  background-color: var(--header-bg-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+}
+
+/* Navigation links */
+.sectionNav {
+  display: flex;
+  height: 100%;
+  gap: 1em;
+}
+
+/* Style for each navigation link */
+.sectionLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition);
+}
+
+/* Hover effect for navigation links */
+.sectionLink:hover {
+  border-bottom: 2px solid var(--heading-color);
+  color: var(--heading-color);
+  font-weight: 500;
+}
+
+/* Style for the active navigation link */
+.activeSectionLink {
+  border-bottom: 2px solid var(--heading-color);
+  color: var(--heading-color);
+  font-weight: 700;
+}
+
+/* Responsive styles */
+@media screen and (min-width: 580px) {
+  .userInformationContainer {
+    flex-direction: column;
+  }
+  .productSection {
+    margin-top: 1em;
+    padding: 1em;
+  }
+}

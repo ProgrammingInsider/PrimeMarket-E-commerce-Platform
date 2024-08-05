@@ -1,0 +1,17 @@
+{
+  "length": 1,
+  "status": true,
+  "results": [
+    {
+      "_id": "668befa2cd23d557285039ef",
+      "name": "iphone 14 pro maxxxx",
+      "description": "the iphone 14 pro max \r\n\r\nfeatures \r\n ✔️ a 6.7-inch super retina xdr display, \r\n ✔️ the a16 bionic chip, and \r\n ✔️ advanced triple-camera system with 48 mp wide, \r\n ✔️ 12 mp ultra-wide, and \r\n ✔️ 12 mp telephoto lenses. \r\n\r\navailable in multiple colors and storage options.",
+      "price": 1199.99,
+      "category": "669bd33d3377976616749db3",
+      "averageRating": 4.5,
+      "ratingCount": 2,
+      "imageUrl": "https://res.cloudinary.com/dahgxnpog/image/upload/v1722583414/phone_hfrddk.jpg",
+      "publicId": "products/o59ug80r9d5sydmfxk5r"
+    }
+  ]
+}

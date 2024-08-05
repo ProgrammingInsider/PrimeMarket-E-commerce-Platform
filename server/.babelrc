@@ -1,0 +1,13 @@
+// .babelrc
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current" // Transpile for the current version of Node.js
+        }
+      }
+    ]
+  ]
+}

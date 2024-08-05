@@ -1,0 +1,177 @@
+.footer {
+  background-color: var(--footer-background-color);
+  padding: 20px 0;
+  color: var(--footer-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerContainer {
+  width: 95%;
+  max-width: 1400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footerSection {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+  text-align: center;
+}
+
+.aboutUsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerLogo {
+  width: 150px;
+}
+
+.footerSection h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--heading-color);
+  color: var(--primary-color);
+}
+
+.footerSection p {
+  text-align: left;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+}
+
+.footerList li {
+  margin-bottom: 5px;
+  color: var(--nav-link-color);
+}
+
+.footerList li:hover {
+  margin-bottom: 5px;
+  color: var(--nav-link-hover-color);
+}
+
+.socialMediaList li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.footerList li a,
+.socialMediaList li a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+}
+
+.footerList li a:hover,
+.socialMediaList li a:hover {
+  color: var(--nav-link-hover-color);
+}
+
+.newsletterInput {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.newsletterButton {
+  padding: 10px;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.newsletterButton:hover {
+  opacity: 0.8;
+}
+
+.socialMediaList {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.socialMediaList li {
+  margin: 5px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.paymentMethodContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paymentMethod {
+  width: 50px;
+  margin: 5px;
+}
+
+.footerSection p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerSection {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .footerLogo {
+    width: 120px;
+  }
+
+  .socialMediaList {
+    justify-content: center;
+  }
+
+  .newsletterInput,
+  .newsletterButton {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerLogo {
+    width: 100px;
+  }
+
+  .footerSection h4 {
+    font-size: 14px;
+  }
+
+  .footerList li {
+    font-size: 14px;
+  }
+
+  .newsletterInput,
+  .newsletterButton {
+    width: 100%;
+  }
+
+  .paymentMethod {
+    width: 40px;
+  }
+}

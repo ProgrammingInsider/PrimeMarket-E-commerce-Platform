@@ -1,0 +1,83 @@
+/* Banner Container */
+.bannerContainer {
+  width: var(--Banner-container-width);
+  max-width: 2560px;
+  margin: 0 auto;
+  height: var(--Banner-container-height);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #ccc;
+}
+
+/* Banner Styles */
+.banner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for better appearance */
+}
+
+/* Banner Image */
+.bannerImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+/* Icon Container */
+.iconContainer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: auto;
+  gap: 0.5em;
+  transition: var(--transition);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.bannerContainer:hover .iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon Styles */
+.bannerIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--icon-color);
+  background-color: var(--background-color);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  padding: 0.5em;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect for Icons */
+.bannerIcon:hover {
+  color: var(--icon-hover-color);
+}
+
+.bannerPlaceholder {
+  width: 100%;
+  height: 100%;
+}

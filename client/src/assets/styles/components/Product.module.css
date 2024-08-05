@@ -1,0 +1,35 @@
+@import "../variables.css";
+
+/* Product titles */
+.product-title {
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 700; /* Bold weight */
+  font-size: 1.5rem; /* Font size */
+  color: #333; /* Text color */
+}
+/* Price tags */
+.price {
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 900; /* Heavy weight */
+  font-size: 1.25rem; /* Font size */
+  color: #28a745; /* Green color for price */
+}
+
+/* Buttons */
+button,
+.btn {
+  font-family: "Amazon Ember", sans-serif;
+  font-weight: 500; /* Medium weight */
+  font-size: 1rem; /* Font size */
+  color: #fff; /* Text color */
+  background-color: #007bff; /* Background color */
+  border: none; /* Remove border */
+  padding: 0.75rem 1.5rem; /* Padding */
+  cursor: pointer; /* Pointer cursor */
+  border-radius: 0.25rem; /* Rounded corners */
+}
+
+button:hover,
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

@@ -1,0 +1,53 @@
+.userContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.userImageContainer {
+  background-color: var(--profile-picture-placeholder-bg);
+  width: 50px;
+  height: 50px;
+  border-radius: var(--Profile_radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilePicPlaceholder {
+  width: 50%;
+  color: var(--heading-color);
+}
+
+.userImageContainer h1 {
+  font-size: 1.1rem;
+}
+
+.userImageContainer img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: var(--Profile_radius);
+}
+
+.usernameContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.usernameContainer p {
+  font-size: 0.9rem;
+}
+
+.username {
+  display: flex;
+  gap: 0.4em;
+  font-size: var(--font-size-label);
+  color: var(--text-color);
+}
+
+.userContainer:hover .username {
+  text-decoration: underline;
+}

@@ -1,0 +1,182 @@
+/* src/assets/styles/variables.css */
+
+/* Define color variables */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Colors */
+  --primary-color: #0056b3;
+  --secondary-color: #6c757d;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --section-color: #f8f9fa;
+  --heading-color: #252525;
+  --para-color: #333333;
+  --label-color: #343a40;
+  --input-info: #495057;
+  --input-border-color: #ced4da;
+  --hyperlink-color: #0056b3;
+  --icon-color: #222222;
+  --icon-hover-color: #0056b3;
+  --button-background-color: #0056b3;
+  --button-text-color: #ffffff;
+  --star-color: #ffc42c;
+  --error-color: #dc3545;
+  --warning-color: #ffc107;
+  --success-color: #28a745;
+  --header-background-color: #ffffff;
+  --border-color: #dee2e6;
+  --menu-background-color: #ffffff;
+  --overlay: rgba(255, 255, 255, 0.8);
+  --nav-link-color: #343a40;
+  --nav-link-hover-color: #0056b3;
+  --product-card-background-color: #f9f9f9;
+  --product-card-border-color: #dee2e6;
+  --product-box-shadow: rgba(0, 0, 0, 0.1);
+  --product-name-color: #005f67;
+  --product-name-color: #005f67;
+  --product-rate-color: #f0c14b;
+  --product-description-color: #555;
+  --product-price-color: #b12704;
+  --product-card-icon: #005f67;
+  --product-cardoptions-hover-color: #f0f0f0;
+  --profile-picture-placeholder-bg: #ccc;
+
+  /* Color for Footer */
+  --footer-background-color: #f1f1f1;
+  --footer-text-color: #4f4f4f;
+
+  /* Font Sizes */
+  --font-size-base: 16px;
+  --font-size-heading: 28px;
+  --font-size-subheading: 24px;
+  --font-size-body: 16px;
+  --font-size-label: 14px;
+  --font-size-input: 14px;
+  --font-size-link: 16px;
+  --font-size-button: 16px;
+
+  /* Transition */
+  --transition: all 0.5s ease-in-out;
+
+  /* Measurements */
+  --Banner-container-width: 100%;
+  --Banner-container-height: 160px;
+  --Banner-width: 100%;
+  --Banner-height: 56.25%;
+  --Profile_radius: 50%;
+  --profile-pic-diameter: 150px;
+  --section-width: 95%;
+  --section-max-width: 1400px;
+  --section-padding: 16px;
+}
+
+/* Define spacing variables */
+:root {
+  --input-space: 20px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --section-space: 1em;
+}
+
+.darkTheme {
+  /* Dark Theme Colors */
+  --primary-color: #3399ff; /* Light blue */
+  --secondary-color: #8c9eff; /* Light gray-blue */
+  --background-color: #1e1e1e; /* Dark background */
+  --text-color: #e0e0e0; /* Light gray for general text */
+  --section-color: #2c2c2c; /* Dark gray for sections */
+  --heading-color: #e0e0e0; /* Light gray for headings */
+  --para-color: #e0e0e0; /* Light gray for paragraphs */
+  --label-color: #b0b0b0; /* Lighter gray for labels */
+  --input-info: #a0a0a0; /* Lighter gray for input info */
+  --input-border-color: #4a4a4a; /* Darker gray for borders */
+  --hyperlink-color: #3399ff; /* Light blue for links */
+  --icon-color: #cccccc; /* Light gray for icons */
+  --icon-hover-color: #66aaff; /* Light blue for hover state */
+  --button-background-color: #3399ff; /* Light blue for buttons */
+  --button-text-color: #ffffff; /* White text on buttons */
+  --star-color: #ffeb3b; /* Bright yellow for stars */
+  --error-color: #f44336; /* Bright red for errors */
+  --warning-color: #ffc107; /* Yellow for warnings */
+  --success-color: #4caf50; /* Bright green for success */
+  --header-background-color: #2c2c2c; /* Dark gray for header */
+  --border-color: #4a4a4a; /* Darker gray for borders */
+  --menu-background-color: #2c2c2c; /* Dark gray for menu */
+  --overlay: rgba(0, 0, 0, 0.8); /* Darker overlay for modals */
+  --nav-link-color: #b0b0b0; /* Light gray for navigation links */
+  --nav-link-hover-color: #66aaff; /* Light blue for link hover state */
+  --product-card-background-color: #2c2c2c; /* Dark gray for product cards */
+  --product-card-border-color: #4a4a4a; /* Darker gray for card borders */
+  --product-box-shadow: rgba(0, 0, 0, 0.5); /* Darker shadow for cards */
+  --product-name-color: #66aaff; /* Light blue for product names */
+  --product-rate-color: #ffeb3b; /* Bright yellow for ratings */
+  --product-description-color: #b0b0b0; /* Light gray for descriptions */
+  --product-price-color: #ff7043; /* Light orange for prices */
+  --product-card-icon: #66aaff; /* Light blue for icons */
+  --product-cardoptions-hover-color: #404040; /* Darker gray for hover options */
+  --profile-picture-placeholder-bg: #666666; /* Darker gray for placeholders */
+
+  /* Color for Footer */
+  --footer-background-color: #1e1e1e; /* Dark background for footer */
+  --footer-text-color: #b0b0b0; /* Light gray for footer text */
+}
+
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("../fonts/Amazon\ Ember.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("../fonts/Amazon\ Ember\ Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("../fonts/Amazon\ Ember\ Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("../fonts/Amazon\ Ember\ Medium\ Italic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("../fonts/Amazon\ Ember\ Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("../fonts/Amazon\ Ember\ Bold\ Italic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("../fonts/Amazon\ Ember\ Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("../fonts/Amazon\ Ember\ Heavy\ Italic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+}

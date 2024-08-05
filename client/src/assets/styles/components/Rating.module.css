@@ -1,0 +1,193 @@
+/* styles/components/Rating.module.css */
+
+.ratingSection {
+  padding: 16px;
+  /* background-color: #fff; */
+}
+
+.sectionTitle {
+  font-size: var(--font-size-heading);
+  color: var(--heading-color);
+}
+
+.ratingContainer {
+  margin-bottom: 32px;
+}
+
+.ratingDescription {
+  font-size: var(--font-size-body);
+  color: var(--text-color);
+  margin-bottom: 16px;
+}
+
+.ratingStatics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 600px;
+}
+
+.ratingCount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.averageCount {
+  font-size: 48px;
+  color: var(--primary-color);
+}
+
+.ratingBarsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.ratingBars {
+  display: flex;
+  align-items: center;
+}
+
+.barBackground {
+  display: flex;
+  margin-left: 8px;
+  background-color: var(--section-color);
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+}
+.bar {
+  position: relative;
+  display: inline-block;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.fiveStarBar {
+  width: 80%;
+}
+
+.fourStarBar {
+  width: 60%;
+}
+
+.threeStarBar {
+  width: 40%;
+}
+
+.twoStarBar {
+  width: 20%;
+}
+
+.oneStarBar {
+  width: 10%;
+}
+.productCommentContainer {
+  max-width: 600px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+  margin-top: 2em;
+}
+
+.productRating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.commentDate {
+  font-size: var(--font-size-label);
+  color: var(--secondary-color);
+}
+
+.comment {
+  font-size: var(--font-size-body);
+  color: var(--text-color);
+}
+
+.commentSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.commentInput {
+  width: 100%;
+  max-width: 500px;
+  height: 100px;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: var(--font-size-body);
+  color: var(--text-color);
+  resize: none;
+  outline: none;
+  background-color: var(--background-color);
+}
+
+.commentInput:focus {
+  border: 1px solid var(--primary-color);
+}
+
+.commentError {
+  font-size: 0.9rem;
+  color: var(--error-color);
+}
+
+.starsContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.rateProductText {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.star {
+  font-size: 24px;
+  color: var(--border-color);
+  cursor: pointer;
+}
+
+.filled {
+  color: var(--star-color);
+}
+
+.rateSubmitBtn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 1rem;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100px;
+  margin-top: 1em;
+  height: 40px;
+}
+
+.rateSubmitBtn:hover {
+  opacity: 0.8;
+}
+@media (min-width: 480px) {
+  .ratingStatics {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}

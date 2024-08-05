@@ -1,0 +1,66 @@
+{
+  "length": 3,
+  "status": true,
+  "result": [
+    {
+      "_id": "66a0664f808ecab7f1ca41d7",
+      "userid": "667c852933acad2623688b9a",
+      "productid": "6689a1eff23bb40c881b0784",
+      "quantity": 1,
+      "status": "active",
+      "createdAt": "2024-07-24T02:26:23.422Z",
+      "updatedAt": "2024-08-03T18:35:08.453Z",
+      "__v": 0,
+      "product": {
+        "_id": "6689a1eff23bb40c881b0784",
+        "name": "apple macbook air m2",
+        "price": 1199.99,
+        "stock": 50,
+        "averageRating": 5,
+        "ratingCount": 1,
+        "imageUrl": "https://res.cloudinary.com/dahgxnpog/image/upload/v1722583432/laptop_mpvvpb.jpg",
+        "isActive": true
+      }
+    },
+    {
+      "_id": "66a408ea0c4d06e0cc0506c1",
+      "userid": "667c852933acad2623688b9a",
+      "productid": "668befa2cd23d557285039ef",
+      "quantity": 2,
+      "status": "active",
+      "createdAt": "2024-07-26T20:36:58.096Z",
+      "updatedAt": "2024-08-03T18:35:08.865Z",
+      "__v": 0,
+      "product": {
+        "_id": "668befa2cd23d557285039ef",
+        "name": "iphone 14 pro max",
+        "price": 1199.99,
+        "stock": 110,
+        "averageRating": 5,
+        "ratingCount": 2,
+        "imageUrl": "https://res.cloudinary.com/dahgxnpog/image/upload/v1722583414/phone_hfrddk.jpg",
+        "isActive": true
+      }
+    },
+    {
+      "_id": "66a56505498e497c4d9e6624",
+      "userid": "667c852933acad2623688b9a",
+      "productid": "66998c5c8aa773a9b056ebc6",
+      "quantity": 1,
+      "status": "active",
+      "createdAt": "2024-07-27T21:22:13.019Z",
+      "updatedAt": "2024-08-03T18:35:08.462Z",
+      "__v": 0,
+      "product": {
+        "_id": "66998c5c8aa773a9b056ebc6",
+        "name": "Canon EOS R5",
+        "price": 3899.99,
+        "stock": 25,
+        "averageRating": 0,
+        "ratingCount": 0,
+        "imageUrl": "https://res.cloudinary.com/dahgxnpog/image/upload/v1722583446/camera_suif0e.jpg",
+        "isActive": true
+      }
+    }
+  ]
+}

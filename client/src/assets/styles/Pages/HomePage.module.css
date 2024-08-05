@@ -1,0 +1,342 @@
+@import "../shared/form.css";
+
+* {
+  list-style-type: none;
+}
+
+.closeFilter {
+  margin: 0;
+  display: block;
+  float: right;
+  font-size: 1.3rem;
+  color: var(--icon-color);
+  cursor: pointer;
+}
+
+.closeFilter:hover {
+  color: var(--icon-hover-colors);
+}
+
+.homePageContainer {
+  display: grid;
+  gap: 1em;
+  padding: 16px;
+}
+
+.filterSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  width: 100%;
+  max-width: 250px;
+  padding: 16px;
+  background-color: var(--section-color);
+  position: fixed;
+  top: -10px;
+  left: 0;
+  transition: var(--transition);
+  z-index: 10;
+  opacity: 1;
+}
+
+.closeFilterSection {
+  left: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.productFilters,
+.filterWithPrice {
+  margin-bottom: 2em;
+}
+
+.filterHeader {
+  font-size: 1.1rem;
+  margin-bottom: 0.7em;
+}
+
+.filterOptions {
+  margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.filterOptions li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+  /* height: 30px; */
+  gap: 0.5em;
+}
+
+.filterOptions li:hover {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.priceOptions {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.priceOptions input {
+  width: 70px;
+  padding: 1em;
+  height: 30px;
+}
+
+.filterSubHeader {
+  font-size: 0.9rem;
+  margin-bottom: 0.5em;
+}
+
+.active {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.checkBox {
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid var(--primary-color);
+  position: relative;
+  align-items: center;
+  justify-content: left;
+  overflow: visible;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.check {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* All Products Section */
+.allProductsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: var(--section-color);
+  border-radius: 8px;
+}
+
+.upperHeader {
+  padding: 0 16px;
+}
+
+.lowerHeader {
+  padding: 16px;
+  justify-content: space-between;
+}
+
+.gridContainer {
+  display: flex;
+  gap: 1em;
+}
+
+.defaultGrid {
+  display: none;
+}
+
+.resultQty {
+  color: var(--icon-color);
+  font-weight: 400;
+  font-style: italic;
+  display: none;
+}
+
+.clearAll {
+  color: var(--primary-color);
+  width: 100px;
+  text-wrap: nowrap;
+  cursor: pointer;
+}
+
+.clearAll:hover {
+  text-decoration: underline;
+}
+
+/* styles.module.css */
+.filterContainer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+  height: 100%;
+  width: 100%;
+}
+
+.filterContainer::-webkit-scrollbar {
+  height: 4px;
+}
+
+.filterContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+
+.filterContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.filter {
+  display: flex;
+  gap: 0.7em;
+  font-size: 1rem;
+  background-color: var(--border-color);
+  padding: 0.2em 0.5em;
+  border-radius: 10px;
+  height: 30px;
+}
+
+.filter span {
+  display: flex;
+  gap: 0.3em;
+  align-items: center;
+}
+
+.key,
+.value {
+  text-wrap: nowrap;
+}
+
+.key {
+  font-weight: 600;
+}
+
+.cancleFilter {
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.1em;
+  transition: var(--transition);
+}
+
+.cancleFilter:hover {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+}
+
+.bar,
+.gridBar {
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.gridBar {
+  display: none;
+}
+
+/* styles.module.css */
+.selectContainer {
+  width: 200px;
+  padding: 10px;
+  font-size: 0.8rem;
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.selectContainer:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+.selectContainer option {
+  padding: 6px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.allProducts {
+  width: 100%;
+  position: relative;
+  background-color: var(--section-color);
+  border-radius: 8px;
+  min-height: 100vh;
+}
+
+@media (min-width: 480px) {
+  .gridBar {
+    display: none;
+  }
+
+  .resultQty {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .twoGrid,
+  .defaultGrid {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .threeGrid,
+  .defaultGrid {
+    display: block;
+  }
+}
+
+@media (min-width: 1280px) {
+  .fourGrid {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .homePageContainer {
+    grid-template-columns: 1fr 6fr;
+  }
+
+  .filterSection {
+    width: 200px;
+    padding: 16px;
+    position: relative;
+    top: 0;
+    border-radius: 8px;
+    height: auto;
+    opacity: 1;
+  }
+
+  .showFilterBar {
+    display: none;
+  }
+
+  .closeFilter {
+    display: none;
+  }
+}

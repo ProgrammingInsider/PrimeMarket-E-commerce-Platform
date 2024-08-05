@@ -1,0 +1,50 @@
+{
+  "length": 4,
+  "status": true,
+  "results": [
+    {
+      "_id": "66998c5c8aa773a9b056ebc6",
+      "name": "Canon EOS R5",
+      "description": "The Canon EOS R5 combines a 45MP full-frame sensor with 8K video recording and advanced autofocus. \r\n\r\n\r\nPerfect for pros, \r\n✔️ it delivers high-resolution imagery, \r\n✔️ fast performance, and \r\n✔️ versatile functionality. \r\n\r\nIdeal for both photography and videography.",
+      "price": 3899.99,
+      "category": "669bd3bc3377976616749db9",
+      "averageRating": 0,
+      "ratingCount": 0,
+      "imageUrl": "https://res.cloudinary.com/dahgxnpog/image/upload/v1722583446/camera_suif0e.jpg",
+      "publicId": "products/uaursu6kj45lred6dwrp"
+    },
+    {
+      "_id": "66944d4ad8d12f97221529e4",
+      "name": "Chanel No. 5",
+      "description": "Chanel No. 5 is a timeless, luxurious fragrance that combines floral, aldehydic, and woody notes to create an elegant and iconic scent.",
+      "price": 199.99,
+      "category": "669bd8393377976616749df2",
+      "averageRating": 4,
+      "ratingCount": 3,
+      "imageUrl": "https://res.cloudinary.com/dahgxnpog/image/upload/v1722583971/perfume_tyrtjb.jpg",
+      "publicId": "products/vbxoffohtt1c8knswirm"
+    },
+    {
+      "_id": "668befa2cd23d557285039ef",
+      "name": "iphone 14 pro max",
+      "description": "the iphone 14 pro max \r\n\r\nfeatures \r\n ✔️ a 6.7-inch super retina xdr display, \r\n ✔️ the a16 bionic chip, and \r\n ✔️ advanced triple-camera system with 48 mp wide, \r\n ✔️ 12 mp ultra-wide, and \r\n ✔️ 12 mp telephoto lenses. \r\n\r\navailable in multiple colors and storage options.",
+      "price": 1199.99,
+      "category": "669bd3bc3377976616749db8",
+      "averageRating": 4.5,
+      "ratingCount": 2,
+      "imageUrl": "https://res.cloudinary.com/dahgxnpog/image/upload/v1722583414/phone_hfrddk.jpg",
+      "publicId": "products/o59ug80r9d5sydmfxk5r"
+    },
+    {
+      "_id": "6689a1eff23bb40c881b0784",
+      "name": "apple macbook air m2",
+      "description": "the apple macbook air m2 is a lightweight and powerful laptop featuring the latest m2 chip, a 13.6-inch retina display, and a sleek, durable aluminum chassis. ideal for both professionals and students.",
+      "price": 1199.99,
+      "category": "669bd4283377976616749dc0",
+      "averageRating": 5,
+      "ratingCount": 1,
+      "imageUrl": "https://res.cloudinary.com/dahgxnpog/image/upload/v1722583432/laptop_mpvvpb.jpg",
+      "publicId": "products/ycondmy656dc1zj1fosx"
+    }
+  ]
+}

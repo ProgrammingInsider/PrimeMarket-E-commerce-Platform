@@ -1,0 +1,17 @@
+{
+  "length": 1,
+  "status": true,
+  "results": [
+    {
+      "_id": "66944d4ad8d12f97221529e4",
+      "name": "Chanel No. 5",
+      "description": "Chanel No. 5 is a timeless, luxurious fragrance that combines floral, aldehydic, and woody notes to create an elegant and iconic scent.",
+      "price": 199.99,
+      "category": "669bd8393377976616749df2",
+      "averageRating": 4,
+      "ratingCount": 3,
+      "imageUrl": "https://res.cloudinary.com/dahgxnpog/image/upload/v1722583971/perfume_tyrtjb.jpg",
+      "publicId": "products/vbxoffohtt1c8knswirm"
+    }
+  ]
+}
