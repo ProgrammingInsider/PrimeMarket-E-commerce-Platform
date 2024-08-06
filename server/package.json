@@ -1,6 +1,7 @@
 {
-  "name": "server",
+  "name": "primemarket-server",
   "version": "1.0.0",
+  "description": "PrimeMarket server - A full-stack MERN e-commerce platform backend",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -12,10 +13,9 @@
     "lint:fix": "eslint . --ext .js --fix",
     "format": "prettier --write ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": ["e-commerce", "mern", "backend"],
+  "author": "Amanuel Abera Kedida",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^2.2.0",
