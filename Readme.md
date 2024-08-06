@@ -1,8 +1,7 @@
-![Build Status](https://img.shields.io/github/actions/workflow/status/yourusername/your-repo/build.yml)
+![Build Status](https://img.shields.io/github/actions/workflow/status/ProgrammingInsider/PrimeMarket-E-commerce-Platform/build.yml)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/github/v/release/yourusername/your-repo)
-![Coverage](https://img.shields.io/codecov/c/github/yourusername/your-repo)
-
+![Version](https://img.shields.io/github/v/release/ProgrammingInsider/PrimeMarket-E-commerce-Platform)
+![Coverage](https://img.shields.io/codecov/c/github/ProgrammingInsider/PrimeMarket-E-commerce-Platform)
 
 # PrimeMarket E-commerce Platform
 
@@ -25,12 +24,11 @@ PrimeMarket features a separate client (frontend) and server (backend) codebase 
 
 ## Live Demo
 
-- **[Live Demo](#)**
+- **[Live Demo](https://primemarket.onrender.com/)**
 
 ## Source Code
 
-- **Frontend Repository**: [GitHub Link](#)
-- **Backend Repository**: [GitHub Link](#)
+- **Repository**: [PrimeMarket-E-commerce-Platform](https://github.com/ProgrammingInsider/PrimeMarket-E-commerce-Platform)
 
 ## Screenshots
 
@@ -74,12 +72,14 @@ PrimeMarket features a separate client (frontend) and server (backend) codebase 
    - **For the frontend**:
 
      ```bash
+     cd client
      npm run dev
      ```
 
    - **For the backend**:
 
      ```bash
+     cd server
      npm run dev
      ```
 
@@ -88,6 +88,7 @@ PrimeMarket features a separate client (frontend) and server (backend) codebase 
    - **For the frontend**:
 
      ```bash
+     cd client
      # Run Unit Tests
      npm test
 
@@ -98,6 +99,7 @@ PrimeMarket features a separate client (frontend) and server (backend) codebase 
    - **For the backend**:
 
      ```bash
+     cd server
      # Run Unit Tests
      npm test
 
@@ -133,8 +135,6 @@ PrimeMarket features a separate client (frontend) and server (backend) codebase 
 
 - Fork the repository and create a new branch for your changes.
 - Submit a pull request with a detailed description of your changes.
-
-
 
 ## Contact Information
 
@@ -172,7 +172,6 @@ Project maintainers have the right and responsibility to remove, edit, or reject
 ## Attribution
 
 This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/), version 1.4.
-
 
 ## Acknowledgements
 
