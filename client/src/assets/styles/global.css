@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import "./variables.css";
 
 /* Reset some default browser styles */
+:root {
+  --font-family:  "Montserrat", sans-serif
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +13,7 @@
 
 /* Set up base typography */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family);
   font-weight: 400; /* Regular weight */
   line-height: 1.6;
   color: var(--text-color);
@@ -18,7 +21,7 @@ body {
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   color: var(--text-color);
 }
@@ -28,7 +31,7 @@ a,
 Link {
   color: var(--hyperlink-color);
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family);
   font-weight: 500; /* Medium weight */
 }
 
@@ -43,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family);
   font-weight: 700; /* Bold weight */
   color: var(--heading-color);
 }
@@ -58,13 +61,13 @@ h2 {
 
 em,
 .italic {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family);
   font-style: italic;
 }
 
 strong,
 b {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family);
   font-weight: 700; /* Bold weight for strong text */
 }
 
