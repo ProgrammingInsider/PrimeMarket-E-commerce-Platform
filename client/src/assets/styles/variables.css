@@ -1,5 +1,3 @@
-/* src/assets/styles/variables.css */
-
 /* Define color variables */
 html {
   font-size: 16px;
@@ -125,7 +123,7 @@ html {
   --footer-text-color: #b0b0b0; /* Light gray for footer text */
 }
 
-@font-face {
+/* @font-face {
   font-family: "Amazon Ember";
   src: url("../fonts/Amazon\ Ember.woff") format("woff");
   font-weight: 400;
@@ -179,4 +177,4 @@ html {
   src: url("../fonts/Amazon\ Ember\ Heavy\ Italic.woff") format("woff");
   font-weight: 900;
   font-style: italic;
-}
+} */
