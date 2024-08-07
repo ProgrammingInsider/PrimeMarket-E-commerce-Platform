@@ -41,10 +41,11 @@ app.use(xss());
 // General Middleware
 app.use(fileUpload({ useTempFiles: true, createParentPath: true }));
 app.use(cookieParser());
-app.use(credentials);
-app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(credentials);
+app.use(cors(corsOptions));
 
 app.use(
   '/uploads/products',
