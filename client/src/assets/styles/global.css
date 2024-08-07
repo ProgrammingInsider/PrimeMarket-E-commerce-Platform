@@ -71,6 +71,10 @@ b {
   font-weight: 700; /* Bold weight for strong text */
 }
 
+button{
+  font-family: var(--font-family);
+}
+
 .mainSection1 {
   background-color: var(--section-color);
   min-height: 30px;
