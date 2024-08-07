@@ -28,7 +28,7 @@ html {
   --header-background-color: #ffffff;
   --border-color: #dee2e6;
   --menu-background-color: #ffffff;
-  --overlay: rgba(255, 255, 255, 0.8);
+  --overlay: rgba(255, 255, 255, 0.9);
   --nav-link-color: #343a40;
   --nav-link-hover-color: #0056b3;
   --product-card-background-color: #f9f9f9;
@@ -104,7 +104,7 @@ html {
   --header-background-color: #2c2c2c; /* Dark gray for header */
   --border-color: #4a4a4a; /* Darker gray for borders */
   --menu-background-color: #2c2c2c; /* Dark gray for menu */
-  --overlay: rgba(0, 0, 0, 0.8); /* Darker overlay for modals */
+  --overlay: rgba(0, 0, 0, 0.9); /* Darker overlay for modals */
   --nav-link-color: #b0b0b0; /* Light gray for navigation links */
   --nav-link-hover-color: #66aaff; /* Light blue for link hover state */
   --product-card-background-color: #2c2c2c; /* Dark gray for product cards */

@@ -51,7 +51,6 @@
 }
 
 :disabled {
-  /* background-color: var(--); */
   opacity: 0.7;
   cursor: not-allowed;
 }

@@ -48,6 +48,7 @@
   transition: transform 0.2s ease-in-out;
   margin: 0;
   max-width: 200px;
+  overflow: hidden;
 }
 
 .productCard:hover {
@@ -150,7 +151,7 @@
   background-color: var(--product-cardoptions-hover-color);
 }
 
-@media (min-width: 400px) {
+@media (min-width: 380px) {
   .productDisplay {
     justify-content: start;
   }
