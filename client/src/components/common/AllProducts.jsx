@@ -140,7 +140,7 @@ const AllProducts = ({
         </div>
         <div className={styles.allProducts}>
           {loading ? (
-            <CircleLoader size={120} />
+            <CircleLoader size={90} />
           ) : (
             <ProductCardDisplay
               products={products}

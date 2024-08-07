@@ -7,7 +7,6 @@
 .cartContainer {
   display: grid;
   gap: 1em;
-  justify-content: center;
 }
 
 .itemHeader {
@@ -43,7 +42,6 @@
 }
 
 .itemImage {
-  width: 220px;
   height: 180px;
   border-radius: 5px;
   overflow: hidden;
@@ -206,10 +204,15 @@ tr {
     flex-direction: row;
     height: 220px;
   }
+
+  .itemImage {
+    width: 220px;
+  }
 }
 
 @media screen and (min-width: 770px) {
   .cartContainer {
+    justify-content: center;
     grid-template-columns: 2fr 1fr;
   }
 

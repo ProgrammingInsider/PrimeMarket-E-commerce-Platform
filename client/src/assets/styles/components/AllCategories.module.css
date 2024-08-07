@@ -15,6 +15,10 @@
   z-index: 10000;
   opacity: 1;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--product-box-shadow);
 }
 
 .allCategoriesContainer::-webkit-scrollbar {
@@ -31,12 +35,6 @@
 
 .allCategoriesContainer::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
-
-.allCategoriesContainer {
-  scrollbar-width: thin;
-  scrollbar-color: #888 #f1f1f1;
-  border-radius: 8px;
 }
 
 .closeAllCategorySection {

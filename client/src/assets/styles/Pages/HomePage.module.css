@@ -20,7 +20,7 @@
 .homePageContainer {
   display: grid;
   gap: 1em;
-  padding: 16px;
+  padding: 8px;
 }
 
 .filterSection {
@@ -38,6 +38,27 @@
   transition: var(--transition);
   z-index: 10;
   opacity: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--product-box-shadow);
+}
+
+.filterSection::-webkit-scrollbar {
+  width: 4px;
+}
+
+.filterSection::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.filterSection::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.filterSection::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .closeFilterSection {
@@ -286,6 +307,12 @@
   background-color: var(--section-color);
   border-radius: 8px;
   min-height: 100vh;
+}
+
+@media (min-width: 400px) {
+  .homePageContainer {
+    padding: 8px;
+  }
 }
 
 @media (min-width: 480px) {

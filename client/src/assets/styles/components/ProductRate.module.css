@@ -38,6 +38,7 @@
 .rateCount {
   font-size: 12px;
   color: var(--product-description-color);
+  text-wrap: nowrap;
 }
 
 .largeText {

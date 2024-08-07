@@ -87,12 +87,6 @@ button{
   margin: 10px auto;
 }
 
-@media (max-width: 430px) {
-  .section {
-    width: 100%;
-  }
-}
-
 .sectionHeader {
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 8px;
