@@ -153,6 +153,19 @@
 
 @media (min-width: 380px) {
   .productDisplay {
+    gap: 16px 0px;
+    justify-content: space-between;
+  }
+
+  .productDisplay > .productCard {
+    flex: 1 1 calc(50% - 4px); /* Two products per row */
+    max-width: calc(50% - 4px);
+  }
+}
+
+@media (min-width: 410px) {
+  .productDisplay {
+    gap: 16px;
     justify-content: start;
   }
 
