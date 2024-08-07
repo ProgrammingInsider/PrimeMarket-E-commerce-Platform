@@ -48,7 +48,6 @@
   transition: transform 0.2s ease-in-out;
   margin: 0;
   max-width: 200px;
-  overflow: hidden;
 }
 
 .productCard:hover {
