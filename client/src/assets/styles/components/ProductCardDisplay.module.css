@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
   padding-bottom: 2em;
+  gap: 16px;
 }
 
 /* Default style - 4 items per row */
@@ -41,7 +41,7 @@
   flex-direction: column;
   border: 1px solid var(--product-card-border-color);
   border-radius: 8px;
-  padding: 16px;
+  padding: 10px;
   background-color: var(--product-card-background-color);
   max-width: 100%;
   box-shadow: 0 2px 4px var(--product-box-shadow);
@@ -149,7 +149,7 @@
   background-color: var(--product-cardoptions-hover-color);
 }
 
-@media (min-width: 480px) {
+@media (min-width: 430px) {
   .productDisplay {
     justify-content: start;
   }

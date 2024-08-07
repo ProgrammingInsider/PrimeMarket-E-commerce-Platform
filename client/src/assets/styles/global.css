@@ -3,7 +3,7 @@
 
 /* Reset some default browser styles */
 :root {
-  --font-family:  "Roboto", sans-serif
+  --font-family:  "Poppins", sans-serif
 }
 * {
   margin: 0;
@@ -85,6 +85,12 @@ button{
   max-width: 1400px;
   padding: 40px 0;
   margin: 10px auto;
+}
+
+@media (max-width: 430px) {
+  .section {
+    width: 100%;
+  }
 }
 
 .sectionHeader {
