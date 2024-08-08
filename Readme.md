@@ -32,8 +32,11 @@ PrimeMarket features a separate client (frontend) and server (backend) codebase 
 
 ## Screenshots
 
-![Homepage](#)
-![Product Page](#)
+![Homepage](https://res.cloudinary.com/dahgxnpog/image/upload/v1723153783/homepage_zlsem9.png)
+![Product Detail Page](https://res.cloudinary.com/dahgxnpog/image/upload/v1723153779/detailpage_vog6xd.png)
+![Profile Page](https://res.cloudinary.com/dahgxnpog/image/upload/v1723153785/profilepage_k6nucy.png)
+![Cart Page](https://res.cloudinary.com/dahgxnpog/image/upload/v1723153778/cartpage_oidoof.png)
+
 
 ## Installation
 
