@@ -1,16 +1,15 @@
 import styles from "../../assets/styles/Pages/CartPage.module.css";
 import ProductRate from "./ProductRate";
-import { FaPlus } from "react-icons/fa6";
-import { FaMinus } from "react-icons/fa6";
+import { FaPlus, FaMinus } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useAxiosPrivate from "../../hooks/useAxiosPrivate";
 import { useGlobalContext } from "../../context/ContextAPI";
 import CircleLoader from "./CircleLoader";
 
-const CartItem = ({ item, id, qty, dispatch }) => {
+const CartItem = ({ item = {}, id, qty, dispatch }) => {
   const [loading, setLoading] = useState(false);
-  const [stock, setStock] = useState(item.stock);
+  const [stock, setStock] = useState(item?.stock || 0);
   const [quantity, setQuantity] = useState(qty);
   const { setCartItem, showDialogBox } = useGlobalContext();
   const axiosPrivate = useAxiosPrivate();
@@ -27,7 +26,7 @@ const CartItem = ({ item, id, qty, dispatch }) => {
 
   const handleInputChange = async (e) => {
     const value = parseInt(e.target.value, 10);
-    if (!isNaN(value) && value >= 1) {
+    if (!isNaN(value) && value >= 1 && value <= stock) {
       setQuantity(value);
     }
   };
@@ -69,11 +68,17 @@ const CartItem = ({ item, id, qty, dispatch }) => {
     }
   };
 
+  // Check if item is defined before rendering anything
+  if (!item || Object.keys(item).length === 0) {
+    return null; // Or return some placeholder content
+  }
+
   return (
-    <div className={styles.item}>
+    (stock!== 0) && (
+      <div className={styles.item}>
       <div className={styles.itemImage}>
-        <Link to={`/product/${item._id}`}>
-          <img src={item.imageUrl} alt={item.name} />
+        <Link to={`/product/${item?._id}`}>
+          <img src={item?.imageUrl} alt={item?.name} />
         </Link>
       </div>
       <div className={styles.itemDescContainer}>
@@ -88,16 +93,16 @@ const CartItem = ({ item, id, qty, dispatch }) => {
             {stock > 0 ? "In Stock" : "Out Of Stock"}
           </span>
 
-          <h1 className={styles.itemName}>{item.name}</h1>
+          <h1 className={styles.itemName}>{item?.name}</h1>
           <ProductRate
-            averageRating={item.averageRating}
-            ratingCount={item.ratingCount}
+            averageRating={item?.averageRating}
+            ratingCount={item?.ratingCount}
           />
-          <p className={styles.itemPrice}>${item.price}</p>
+          <p className={styles.itemPrice}>${item?.price}</p>
           <button
             className={`${styles.itemRemoveBtn} ${styles.cartBtn}`}
             onClick={removeCartItem}
-            data-testid={`removeBtn${item._id}`}
+            data-testid={`removeBtn${item?._id}`}
           >
             {loading ? <CircleLoader /> : "Remove from cart"}
           </button>
@@ -106,7 +111,7 @@ const CartItem = ({ item, id, qty, dispatch }) => {
           <FaMinus
             className={styles.cartIcon}
             onClick={() => handleQuantity("minus")}
-            data-testid={`minus${item._id}`}
+            data-testid={`minus${item?._id}`}
           />
           <input
             type="number"
@@ -115,16 +120,17 @@ const CartItem = ({ item, id, qty, dispatch }) => {
             className={styles.itemQuantity}
             min={1}
             max={stock}
-            aria-label={`quantity-${item._id}`}
+            aria-label={`quantity-${item?._id}`}
           />
           <FaPlus
             className={styles.cartIcon}
             onClick={() => handleQuantity("plus")}
-            data-testid={`plus${item._id}`}
+            data-testid={`plus${item?._id}`}
           />
         </div>
       </div>
     </div>
+    )
   );
 };
 
