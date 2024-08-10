@@ -37,20 +37,19 @@ PrimeMarket features a separate client (frontend) and server (backend) codebase 
 ![Profile Page](https://res.cloudinary.com/dahgxnpog/image/upload/v1723153785/profilepage_k6nucy.png)
 ![Cart Page](https://res.cloudinary.com/dahgxnpog/image/upload/v1723153778/cartpage_oidoof.png)
 
-
 ## Installation
 
 ### Prerequisites
 
 - Node.js (LTS version recommended)
-- Docker (for containerization) if want to use Docker image
+- Docker (for containerization) if you want to use Docker
 
 ### Steps
 
 1. **Clone the Repository**
 
     ```bash
-    https://github.com/ProgrammingInsider/PrimeMarket-E-commerce-Platform.git
+    git clone https://github.com/ProgrammingInsider/PrimeMarket-E-commerce-Platform.git
     cd PrimeMarket-E-commerce-Platform
     ```
 
@@ -118,10 +117,68 @@ PrimeMarket features a separate client (frontend) and server (backend) codebase 
 
 6. **Docker**
 
-    ```bash
-    docker build -t primemarket-ecommerce .
-    docker run -p 3000:3000 primemarket-ecommerce
-    ```
+   - **Pull the Docker Images**
+
+     ```bash
+     docker pull aman2208/primemarket-web:v1.0.0
+     docker pull aman2208/primemarket-api:v1.0.0
+     ```
+
+   - **Create a `docker-compose.yml` File**
+
+     ```yaml
+     version: '3'
+     services:
+       web:
+         image: aman2208/primemarket-web:v1.0.0
+         ports:
+           - 5173:5173
+         environment:
+           - NODE_ENV=production
+           - VITE_BASE_URL=${VITE_BASE_URL}
+         networks:
+           - frontend
+
+       api:
+         image: aman2208/primemarket-api:v1.0.0
+         ports:
+           - 5000:5000
+         environment:
+           - PORT=5000
+           - MONGO_URL_PROD=${MONGO_URL_PROD}
+           - ACCESS_TOKEN_SECRET=${ACCESS_TOKEN_SECRET}
+           - REFRESH_TOKEN_SECRET=${REFRESH_TOKEN_SECRET}
+           - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY}
+           - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
+           - CLOUDINARY_CLOUD_NAME=${CLOUDINARY_CLOUD_NAME}
+         networks:
+           - frontend
+           - backend
+
+     networks:
+       frontend:
+       backend:
+     ```
+
+   - **Provide a `.env` File**
+
+     ```bash
+     # Create a .env file in the same directory as docker-compose.yml with the necessary environment variables. Example .env file:
+     PORT=5000
+     VITE_BASE_URL=VITE_BASE_URL
+     MONGO_URL_PROD=mongo_url
+     ACCESS_TOKEN_SECRET=access_token_secret
+     REFRESH_TOKEN_SECRET=refresh_token_secret
+     CLOUDINARY_API_KEY=cloudinary_api_key
+     CLOUDINARY_API_SECRET=cloudinary_api_secret
+     CLOUDINARY_CLOUD_NAME=cloudinary_cloud_name
+     ```
+
+   - **Run the Application**
+
+     ```bash
+     docker-compose up
+     ```
 
 ## Challenges & Solutions
 
@@ -180,7 +237,7 @@ This Code of Conduct is adapted from the [Contributor Covenant](https://www.cont
 
 - **Cloudinary** for media management.
 - **MongoDB Atlas** for database hosting.
-- **Vercel** and **Heroku** for deployment.
+- **Render** for deployment.
 
 ## License
 
