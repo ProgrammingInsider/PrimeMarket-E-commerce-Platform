@@ -127,37 +127,39 @@ PrimeMarket features a separate client (frontend) and server (backend) codebase 
    - **Create a `docker-compose.yml` File**
 
      ```yaml
-     version: '3'
-     services:
-       web:
-         image: aman2208/primemarket-web:v1.0.0
-         ports:
-           - 5173:5173
-         environment:
-           - NODE_ENV=production
-           - VITE_BASE_URL=${VITE_BASE_URL}
-         networks:
-           - frontend
+      version: '3'
+      services:
+        web:
+          image: aman2208/primemarket-web:v1.0.0
+          ports:
+            - 5173:5173
+          environment:
+            - NODE_ENV=production
+            - VITE_BASE_URL=${VITE_BASE_URL}
+          networks:
+            - frontend
+          depends_on:
+            - api
 
-       api:
-         image: aman2208/primemarket-api:v1.0.0
-         ports:
-           - 5000:5000
-         environment:
-           - PORT=5000
-           - MONGO_URL_PROD=${MONGO_URL_PROD}
-           - ACCESS_TOKEN_SECRET=${ACCESS_TOKEN_SECRET}
-           - REFRESH_TOKEN_SECRET=${REFRESH_TOKEN_SECRET}
-           - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY}
-           - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
-           - CLOUDINARY_CLOUD_NAME=${CLOUDINARY_CLOUD_NAME}
-         networks:
-           - frontend
-           - backend
+        api:
+          image: aman2208/primemarket-api:v1.0.0
+          ports:
+            - 5000:5000
+          environment:
+            - PORT=5000
+            - MONGO_URL_PROD=${MONGO_URL_PROD}
+            - ACCESS_TOKEN_SECRET=${ACCESS_TOKEN_SECRET}
+            - REFRESH_TOKEN_SECRET=${REFRESH_TOKEN_SECRET}
+            - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY}
+            - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
+            - CLOUDINARY_CLOUD_NAME=${CLOUDINARY_CLOUD_NAME}
+          networks:
+            - frontend
+            - backend
 
-     networks:
-       frontend:
-       backend:
+      networks:
+        frontend:
+        backend:
      ```
 
    - **Provide a `.env` File**
