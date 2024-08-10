@@ -9,7 +9,7 @@ services:
       - 5173:5173
     environment:
       - NODE_ENV=production
-      - VITE_BASE_URL=http://localhost:5000/api/v1/ecommerce_portfolio/
+      - VITE_BASE_URL=${VITE_BASE_URL}
     networks:
       - frontend
     volumes:
