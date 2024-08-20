@@ -60,10 +60,10 @@ jobs:
           echo "Client started on port 5173"
 
       # Wait for both client and server to be ready before running Cypress
-      - name: Wait for client and server to be ready
-        run: |
-          while ! curl -s http://localhost:5173 > /dev/null; do echo "Waiting for client..."; sleep 30; done
-          while ! curl -s http://localhost:5000 > /dev/null; do echo "Waiting for server..."; sleep 30; done
+      # - name: Wait for client and server to be ready
+      #   run: |
+      #     while ! curl -s http://localhost:5173 > /dev/null; do echo "Waiting for client..."; sleep 30; done
+      #     while ! curl -s http://localhost:5000 > /dev/null; do echo "Waiting for server..."; sleep 30; done
 
       # Run Cypress end-to-end tests
       - name: Run Cypress Tests
