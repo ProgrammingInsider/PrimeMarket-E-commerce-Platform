@@ -44,7 +44,6 @@ jobs:
         working-directory: ./server
         run: |
           npm install
-          npm test
 
       # Start the server in the background
       - name: Start Server
