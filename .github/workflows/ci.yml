@@ -1,4 +1,4 @@
-name: CI/CD for Prime Market Ecommerce App
+name: CI/CD for Prime Market Ecommerce Application
 
 on:
   push:
