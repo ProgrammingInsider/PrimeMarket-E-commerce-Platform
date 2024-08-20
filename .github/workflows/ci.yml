@@ -21,11 +21,11 @@ jobs:
         with:
           node-version: 20.11.1
 
-      - name: Install Vercel CLI
-        run: npm install -g vercel
+      # - name: Install Vercel CLI
+      #   run: npm install -g vercel
 
-      - name: Verify Vercel CLI Installation
-        run: vercel --version
+      # - name: Verify Vercel CLI Installation
+      #   run: vercel --version
 
       # Run unit tests for the client
       - name: Install dependencies and run client tests
@@ -53,17 +53,17 @@ jobs:
           npm start &
           echo "Server started on port 5000"
       
-      # Start the client in the background
+      # Start the Vite client in the background (default port 5173)
       - name: Start Client
         working-directory: ./client
         run: |
-          npm start &
-          echo "Client started on port 3000"
+          npm run dev &
+          echo "Client started on port 5173"
 
       # Wait for both client and server to be ready before running Cypress
       - name: Wait for client and server to be ready
         run: |
-          while ! curl -s http://localhost:3000 > /dev/null; do echo "Waiting for client..."; sleep 5; done
+          while ! curl -s http://localhost:5173 > /dev/null; do echo "Waiting for client..."; sleep 5; done
           while ! curl -s http://localhost:5000 > /dev/null; do echo "Waiting for server..."; sleep 5; done
 
       # Run Cypress end-to-end tests
