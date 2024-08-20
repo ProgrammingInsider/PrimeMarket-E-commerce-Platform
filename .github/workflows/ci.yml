@@ -1,0 +1,62 @@
+name: CI/CD for Prime Market Ecommerce App
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy-client:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.11.1
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      - name: Verify Vercel CLI Installation
+        run: vercel --version
+
+      - name: Install and Build Client
+        working-directory: ./client
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to Vercel
+        run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        working-directory: ./client
+
+  build-and-deploy-server:
+    runs-on: ubuntu-latest
+    needs: build-and-deploy-client
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.11.1
+
+      - name: Install dependencies and deploy server to Render
+        working-directory: ./server
+        run: |
+          npm install
+          curl -X POST -H "Authorization: Bearer ${{ secrets.RENDER_API_TOKEN }}" \
+            -H "Accept: application/json" \
+            -d '{"clearCache": true}' \
+            https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID }}/deploys
