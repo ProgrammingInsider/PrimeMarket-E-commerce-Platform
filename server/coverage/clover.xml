@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1722869585886" clover="3.2.0">
-  <project timestamp="1722869585886" name="All files">
-    <metrics statements="711" coveredstatements="658" conditionals="268" coveredconditionals="237" methods="74" coveredmethods="66" elements="1053" coveredelements="961" complexity="0" loc="711" ncloc="711" packages="9" files="53" classes="53"/>
+<coverage generated="1724183467158" clover="3.2.0">
+  <project timestamp="1724183467158" name="All files">
+    <metrics statements="713" coveredstatements="660" conditionals="268" coveredconditionals="237" methods="74" coveredmethods="66" elements="1055" coveredelements="963" complexity="0" loc="713" ncloc="713" packages="9" files="53" classes="53"/>
     <package name="server">
       <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="app.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\app.js">
+      <file name="app.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\app.js">
         <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="15" count="4" type="stmt"/>
         <line num="18" count="4" type="stmt"/>
@@ -12,37 +12,37 @@
         <line num="38" count="4" type="stmt"/>
         <line num="39" count="4" type="stmt"/>
         <line num="42" count="4" type="stmt"/>
-        <line num="43" count="4" type="stmt"/>
-        <line num="44" count="4" type="stmt"/>
-        <line num="45" count="4" type="stmt"/>
-        <line num="46" count="4" type="stmt"/>
-        <line num="47" count="4" type="stmt"/>
+        <line num="48" count="4" type="stmt"/>
         <line num="49" count="4" type="stmt"/>
+        <line num="50" count="4" type="stmt"/>
+        <line num="52" count="4" type="stmt"/>
         <line num="53" count="4" type="stmt"/>
-        <line num="54" count="4" type="stmt"/>
         <line num="55" count="4" type="stmt"/>
-        <line num="57" count="4" type="stmt"/>
-        <line num="58" count="4" type="stmt"/>
+        <line num="59" count="4" type="stmt"/>
+        <line num="60" count="4" type="stmt"/>
+        <line num="61" count="4" type="stmt"/>
+        <line num="63" count="4" type="stmt"/>
+        <line num="64" count="4" type="stmt"/>
       </file>
     </package>
     <package name="server.config">
       <metrics statements="21" coveredstatements="16" conditionals="4" coveredconditionals="2" methods="5" coveredmethods="3"/>
-      <file name="allowedOrigins.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\config\allowedOrigins.js">
+      <file name="allowedOrigins.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\config\allowedOrigins.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="5" type="stmt"/>
       </file>
-      <file name="cloudinary.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\config\cloudinary.js">
+      <file name="cloudinary.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\config\cloudinary.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="16" type="stmt"/>
       </file>
-      <file name="corsOptions.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\config\corsOptions.js">
+      <file name="corsOptions.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\config\corsOptions.js">
         <metrics statements="4" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="3" count="4" type="stmt"/>
         <line num="5" count="110" type="cond" truecount="2" falsecount="2"/>
         <line num="6" count="110" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
       </file>
-      <file name="db.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\config\db.js">
+      <file name="db.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\config\db.js">
         <metrics statements="13" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
         <line num="4" count="4" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
@@ -58,18 +58,18 @@
         <line num="28" count="0" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
       </file>
-      <file name="roles.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\config\roles.js">
+      <file name="roles.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\config\roles.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="6" type="stmt"/>
       </file>
-      <file name="trustedDomains.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\config\trustedDomains.js">
+      <file name="trustedDomains.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\config\trustedDomains.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="5" type="stmt"/>
       </file>
     </package>
     <package name="server.controllers">
       <metrics statements="433" coveredstatements="404" conditionals="194" coveredconditionals="175" methods="39" coveredmethods="34"/>
-      <file name="cloudinaryControllers.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\controllers\cloudinaryControllers.js">
+      <file name="cloudinaryControllers.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\controllers\cloudinaryControllers.js">
         <metrics statements="101" coveredstatements="100" conditionals="46" coveredconditionals="44" methods="7" coveredmethods="7"/>
         <line num="14" count="10" type="stmt"/>
         <line num="15" count="7" type="stmt"/>
@@ -173,7 +173,7 @@
         <line num="318" count="2" type="stmt"/>
         <line num="321" count="2" type="stmt"/>
       </file>
-      <file name="privateControllers.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\controllers\privateControllers.js">
+      <file name="privateControllers.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\controllers\privateControllers.js">
         <metrics statements="217" coveredstatements="217" conditionals="88" coveredconditionals="87" methods="19" coveredmethods="19"/>
         <line num="24" count="19" type="stmt"/>
         <line num="25" count="6" type="stmt"/>
@@ -393,7 +393,7 @@
         <line num="610" count="2" type="stmt"/>
         <line num="614" count="2" type="stmt"/>
       </file>
-      <file name="protectedControllers.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\controllers\protectedControllers.js">
+      <file name="protectedControllers.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\controllers\protectedControllers.js">
         <metrics statements="22" coveredstatements="21" conditionals="14" coveredconditionals="12" methods="2" coveredmethods="2"/>
         <line num="8" count="6" type="stmt"/>
         <line num="9" count="6" type="stmt"/>
@@ -418,7 +418,7 @@
         <line num="62" count="1" type="stmt"/>
         <line num="66" count="1" type="stmt"/>
       </file>
-      <file name="publicControllers.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\controllers\publicControllers.js">
+      <file name="publicControllers.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\controllers\publicControllers.js">
         <metrics statements="93" coveredstatements="66" conditionals="46" coveredconditionals="32" methods="11" coveredmethods="6"/>
         <line num="8" count="10" type="stmt"/>
         <line num="27" count="10" type="stmt"/>
@@ -517,61 +517,63 @@
     </package>
     <package name="server.errors">
       <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
-      <file name="bad-request.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\errors\bad-request.js">
+      <file name="bad-request.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\errors\bad-request.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="120" type="stmt"/>
         <line num="7" count="120" type="stmt"/>
       </file>
-      <file name="convention-error.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\errors\convention-error.js">
+      <file name="convention-error.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\errors\convention-error.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="6" type="stmt"/>
         <line num="7" count="6" type="stmt"/>
       </file>
-      <file name="csrf-error.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\errors\csrf-error.js">
+      <file name="csrf-error.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\errors\csrf-error.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
       </file>
-      <file name="custom-error.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\errors\custom-error.js">
+      <file name="custom-error.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\errors\custom-error.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="181" type="stmt"/>
       </file>
-      <file name="forbidden.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\errors\forbidden.js">
+      <file name="forbidden.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\errors\forbidden.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="21" type="stmt"/>
         <line num="7" count="21" type="stmt"/>
       </file>
-      <file name="index.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\errors\index.js">
+      <file name="index.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\errors\index.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
-      <file name="no-content.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\errors\no-content.js">
+      <file name="no-content.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\errors\no-content.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
       </file>
-      <file name="not-found.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\errors\not-found.js">
+      <file name="not-found.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\errors\not-found.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="14" type="stmt"/>
         <line num="7" count="14" type="stmt"/>
       </file>
-      <file name="unauthenticated.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\errors\unauthenticated.js">
+      <file name="unauthenticated.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\errors\unauthenticated.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="17" type="stmt"/>
         <line num="7" count="17" type="stmt"/>
       </file>
     </package>
     <package name="server.middleware">
-      <metrics statements="51" coveredstatements="44" conditionals="26" coveredconditionals="21" methods="8" coveredmethods="7"/>
-      <file name="credentials.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\middleware\credentials.js">
-        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <metrics statements="53" coveredstatements="46" conditionals="26" coveredconditionals="21" methods="8" coveredmethods="7"/>
+      <file name="credentials.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\middleware\credentials.js">
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="3" count="5" type="stmt"/>
         <line num="4" count="112" type="stmt"/>
-        <line num="6" count="112" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="112" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="14" count="112" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="112" type="stmt"/>
       </file>
-      <file name="errorHandler.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\middleware\errorHandler.js">
+      <file name="errorHandler.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\middleware\errorHandler.js">
         <metrics statements="15" coveredstatements="8" conditionals="14" coveredconditionals="9" methods="2" coveredmethods="1"/>
         <line num="4" count="5" type="stmt"/>
         <line num="5" count="52" type="cond" truecount="2" falsecount="0"/>
@@ -589,12 +591,12 @@
         <line num="31" count="0" type="stmt"/>
         <line num="34" count="1" type="stmt"/>
       </file>
-      <file name="notFound.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\middleware\notFound.js">
+      <file name="notFound.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\middleware\notFound.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="5" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
       </file>
-      <file name="privateAuth.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\middleware\privateAuth.js">
+      <file name="privateAuth.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\middleware\privateAuth.js">
         <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="4" count="4" type="stmt"/>
         <line num="5" count="78" type="stmt"/>
@@ -607,7 +609,7 @@
         <line num="17" count="73" type="stmt"/>
         <line num="19" count="3" type="stmt"/>
       </file>
-      <file name="protectedAuth.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\middleware\protectedAuth.js">
+      <file name="protectedAuth.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\middleware\protectedAuth.js">
         <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="4" type="stmt"/>
         <line num="4" count="81" type="stmt"/>
@@ -621,7 +623,7 @@
         <line num="18" count="4" type="stmt"/>
         <line num="20" count="79" type="stmt"/>
       </file>
-      <file name="validate.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\middleware\validate.js">
+      <file name="validate.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\middleware\validate.js">
         <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="6" count="5" type="stmt"/>
         <line num="7" count="89" type="stmt"/>
@@ -634,18 +636,18 @@
     </package>
     <package name="server.model">
       <metrics statements="24" coveredstatements="24" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3"/>
-      <file name="Cart.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\model\Cart.js">
+      <file name="Cart.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\model\Cart.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="19" type="stmt"/>
         <line num="33" count="19" type="stmt"/>
         <line num="34" count="19" type="stmt"/>
         <line num="36" count="19" type="stmt"/>
       </file>
-      <file name="Category.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\model\Category.js">
+      <file name="Category.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\model\Category.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="31" type="stmt"/>
       </file>
-      <file name="Product.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\model\Product.js">
+      <file name="Product.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\model\Product.js">
         <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="4" count="33" type="stmt"/>
         <line num="94" count="33" type="stmt"/>
@@ -654,13 +656,13 @@
         <line num="98" count="5" type="stmt"/>
         <line num="101" count="33" type="stmt"/>
       </file>
-      <file name="Rate.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\model\Rate.js">
+      <file name="Rate.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\model\Rate.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="25" type="stmt"/>
         <line num="39" count="25" type="stmt"/>
         <line num="41" count="25" type="stmt"/>
       </file>
-      <file name="User.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\model\User.js">
+      <file name="User.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\model\User.js">
         <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="4" count="33" type="stmt"/>
         <line num="98" count="33" type="stmt"/>
@@ -676,7 +678,7 @@
     </package>
     <package name="server.routes">
       <metrics statements="43" coveredstatements="43" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="privateRoutes.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\routes\privateRoutes.js">
+      <file name="privateRoutes.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\routes\privateRoutes.js">
         <metrics statements="28" coveredstatements="28" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="46" count="4" type="stmt"/>
         <line num="48" count="4" type="stmt"/>
@@ -707,7 +709,7 @@
         <line num="170" count="4" type="stmt"/>
         <line num="174" count="4" type="stmt"/>
       </file>
-      <file name="protectedRoutes.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\routes\protectedRoutes.js">
+      <file name="protectedRoutes.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\routes\protectedRoutes.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="4" type="stmt"/>
         <line num="12" count="4" type="stmt"/>
@@ -715,7 +717,7 @@
         <line num="29" count="4" type="stmt"/>
         <line num="32" count="4" type="stmt"/>
       </file>
-      <file name="publicRoutes.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\routes\publicRoutes.js">
+      <file name="publicRoutes.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\routes\publicRoutes.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="4" type="stmt"/>
         <line num="26" count="4" type="stmt"/>
@@ -731,13 +733,13 @@
     </package>
     <package name="server.utils">
       <metrics statements="93" coveredstatements="82" conditionals="34" coveredconditionals="31" methods="9" coveredmethods="9"/>
-      <file name="calculateNewAverageRating.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\utils\calculateNewAverageRating.js">
+      <file name="calculateNewAverageRating.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\utils\calculateNewAverageRating.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="19" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
       </file>
-      <file name="deleteCloudinaryImage.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\utils\deleteCloudinaryImage.js">
+      <file name="deleteCloudinaryImage.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\utils\deleteCloudinaryImage.js">
         <metrics statements="10" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="4" count="10" type="stmt"/>
         <line num="5" count="7" type="stmt"/>
@@ -750,7 +752,7 @@
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
       </file>
-      <file name="deleteImageLocally.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\utils\deleteImageLocally.js">
+      <file name="deleteImageLocally.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\utils\deleteImageLocally.js">
         <metrics statements="9" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="4" count="19" type="stmt"/>
         <line num="6" count="19" type="stmt"/>
@@ -762,7 +764,7 @@
         <line num="18" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
       </file>
-      <file name="tokenService.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\utils\tokenService.js">
+      <file name="tokenService.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\utils\tokenService.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="9" type="stmt"/>
         <line num="5" count="9" type="stmt"/>
@@ -770,7 +772,7 @@
         <line num="12" count="4" type="stmt"/>
         <line num="16" count="4" type="stmt"/>
       </file>
-      <file name="updateAverageRating.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\utils\updateAverageRating.js">
+      <file name="updateAverageRating.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\utils\updateAverageRating.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="19" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
@@ -778,7 +780,7 @@
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
       </file>
-      <file name="updateCloudinaryImage.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\utils\updateCloudinaryImage.js">
+      <file name="updateCloudinaryImage.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\utils\updateCloudinaryImage.js">
         <metrics statements="19" coveredstatements="17" conditionals="10" coveredconditionals="9" methods="1" coveredmethods="1"/>
         <line num="4" count="10" type="stmt"/>
         <line num="5" count="10" type="stmt"/>
@@ -800,7 +802,7 @@
         <line num="48" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
       </file>
-      <file name="uploadCloudinaryImage.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\utils\uploadCloudinaryImage.js">
+      <file name="uploadCloudinaryImage.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\utils\uploadCloudinaryImage.js">
         <metrics statements="17" coveredstatements="15" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
         <line num="4" count="10" type="stmt"/>
         <line num="5" count="10" type="stmt"/>
@@ -820,7 +822,7 @@
         <line num="38" count="0" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
       </file>
-      <file name="uploadImageLocally.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\utils\uploadImageLocally.js">
+      <file name="uploadImageLocally.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\utils\uploadImageLocally.js">
         <metrics statements="19" coveredstatements="18" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
         <line num="4" count="19" type="stmt"/>
         <line num="5" count="19" type="stmt"/>
@@ -842,7 +844,7 @@
         <line num="36" count="6" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
       </file>
-      <file name="validateURL.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\utils\validateURL.js">
+      <file name="validateURL.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\utils\validateURL.js">
         <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="3" count="5" type="stmt"/>
         <line num="4" count="5" type="stmt"/>
@@ -854,47 +856,47 @@
     </package>
     <package name="server.validationInputs">
       <metrics statements="14" coveredstatements="13" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
-      <file name="cartValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\validationInputs\cartValidation.js">
+      <file name="cartValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\validationInputs\cartValidation.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="4" type="stmt"/>
       </file>
-      <file name="categoryValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\validationInputs\categoryValidation.js">
+      <file name="categoryValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\validationInputs\categoryValidation.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="4" type="stmt"/>
         <line num="12" count="3" type="stmt"/>
       </file>
-      <file name="idValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\validationInputs\idValidation.js">
+      <file name="idValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\validationInputs\idValidation.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="4" type="stmt"/>
       </file>
-      <file name="oldPublicIdValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\validationInputs\oldPublicIdValidation.js">
+      <file name="oldPublicIdValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\validationInputs\oldPublicIdValidation.js">
         <metrics statements="4" coveredstatements="3" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
         <line num="3" count="4" type="stmt"/>
         <line num="6" count="23" type="cond" truecount="3" falsecount="1"/>
         <line num="7" count="23" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
       </file>
-      <file name="productValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\validationInputs\productValidation.js">
+      <file name="productValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\validationInputs\productValidation.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="4" type="stmt"/>
       </file>
-      <file name="rateValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\validationInputs\rateValidation.js">
+      <file name="rateValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\validationInputs\rateValidation.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="4" type="stmt"/>
       </file>
-      <file name="signinValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\validationInputs\signinValidation.js">
+      <file name="signinValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\validationInputs\signinValidation.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="4" type="stmt"/>
       </file>
-      <file name="signupUpdateValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\validationInputs\signupUpdateValidation.js">
+      <file name="signupUpdateValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\validationInputs\signupUpdateValidation.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="4" type="stmt"/>
       </file>
-      <file name="signupValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\validationInputs\signupValidation.js">
+      <file name="signupValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\validationInputs\signupValidation.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="4" type="stmt"/>
       </file>
-      <file name="updateCartValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\Ecommerce\server\validationInputs\updateCartValidation.js">
+      <file name="updateCartValidation.js" path="C:\Users\Amoo\Desktop\Portfolio\PrimeMarket\server\validationInputs\updateCartValidation.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="4" type="stmt"/>
       </file>

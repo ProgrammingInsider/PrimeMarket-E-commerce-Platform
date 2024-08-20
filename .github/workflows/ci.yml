@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build-and-deploy-client:
+  build-and-deploy-client-and-server:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,52 +27,60 @@ jobs:
       - name: Verify Vercel CLI Installation
         run: vercel --version
 
-      # Run unit tests for the client before building
+      # Run unit tests for the client
       - name: Install dependencies and run client tests
         working-directory: ./client
         run: |
           npm install
           npm test
 
+      # Build the client
       - name: Install and Build Client
         working-directory: ./client
         run: npm run build
 
-      # Run Cypress end-to-end tests for the client
-      - name: Run Cypress Tests
-        working-directory: ./client
-        run: npx cypress run
-
-      # - name: Deploy to Vercel
-      #   run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --team ${{ secrets.VERCEL_TEAM_ID }}
-      #   env:
-      #     VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-      #   working-directory: ./client
-
-  build-and-deploy-server:
-    runs-on: ubuntu-latest
-    needs: build-and-deploy-client
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20.11.1
-
-      # Run unit tests for the server before deploying
+      # Run unit tests for the server
       - name: Install dependencies and run server tests
         working-directory: ./server
         run: |
           npm install
           npm test
 
-      # - name: Install dependencies and deploy server to Render
+      # Start the server in the background
+      - name: Start Server
+        working-directory: ./server
+        run: |
+          npm start &
+          echo "Server started on port 5000"
+      
+      # Start the client in the background
+      - name: Start Client
+        working-directory: ./client
+        run: |
+          npm start &
+          echo "Client started on port 3000"
+
+      # Wait for both client and server to be ready before running Cypress
+      - name: Wait for client and server to be ready
+        run: |
+          while ! curl -s http://localhost:3000 > /dev/null; do echo "Waiting for client..."; sleep 5; done
+          while ! curl -s http://localhost:5000 > /dev/null; do echo "Waiting for server..."; sleep 5; done
+
+      # Run Cypress end-to-end tests
+      - name: Run Cypress Tests
+        working-directory: ./client
+        run: npx cypress run
+
+      # Optionally deploy client and server after tests pass
+      # - name: Deploy to Vercel
+      #   run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --team ${{ secrets.VERCEL_TEAM_ID }}
+      #   env:
+      #     VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      #   working-directory: ./client
+      # 
+      # - name: Deploy server to Render
       #   working-directory: ./server
       #   run: |
-      #     npm install
       #     curl -X POST -H "Authorization: Bearer ${{ secrets.RENDER_API_TOKEN }}" \
       #       -H "Accept: application/json" \
       #       -d '{"clearCache": true}' \
