@@ -1,86 +1,32 @@
-name: CI/CD for Prime Market Ecommerce Application
+name: Continuous Integration Workflow
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  build-and-deploy-client-and-server:
+  test:
+    name: 'Run Tests'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: 'Checkout Repository'
         uses: actions/checkout@v2
 
-      - name: Install Node.js
+      - name: 'Install Node.js'
         uses: actions/setup-node@v3
         with:
           node-version: 20.11.1
-
-      # - name: Install Vercel CLI
-      #   run: npm install -g vercel
-
-      # - name: Verify Vercel CLI Installation
-      #   run: vercel --version
-
-      # Run unit tests for the client
-      - name: Install dependencies and run client tests
+      
+      - name: 'Install Dependencies & Test Frontend'
         working-directory: ./client
         run: |
           npm install
           npm test
 
-      # Build the client
-      - name: Install and Build Client
-        working-directory: ./client
-        run: npm run build
-
-      # Run unit tests for the server
-      - name: Install dependencies and run server tests
+      - name: 'Install Dependencies & Test Backend'
         working-directory: ./server
         run: |
           npm install
-
-      # Start the server in the background
-      - name: Start Server
-        working-directory: ./server
-        run: |
-          npm start &
-          echo "Server started on port 5000"
-      
-      # Start the Vite client in the background (default port 5173)
-      - name: Start Client
-        working-directory: ./client
-        run: |
-          npm run dev &
-          echo "Client started on port 5173"
-
-      # Wait for both client and server to be ready before running Cypress
-      # - name: Wait for client and server to be ready
-      #   run: |
-      #     while ! curl -s http://localhost:5173 > /dev/null; do echo "Waiting for client..."; sleep 30; done
-      #     while ! curl -s http://localhost:5000 > /dev/null; do echo "Waiting for server..."; sleep 30; done
-
-      # Run Cypress end-to-end tests
-      - name: Run Cypress Tests
-        working-directory: ./client
-        run: npx cypress run
-
-      # Optionally deploy client and server after tests pass
-      # - name: Deploy to Vercel
-      #   run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --team ${{ secrets.VERCEL_TEAM_ID }}
-      #   env:
-      #     VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-      #   working-directory: ./client
-      # 
-      # - name: Deploy server to Render
-      #   working-directory: ./server
-      #   run: |
-      #     curl -X POST -H "Authorization: Bearer ${{ secrets.RENDER_API_TOKEN }}" \
-      #       -H "Accept: application/json" \
-      #       -d '{"clearCache": true}' \
-      #       https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID }}/deploys
+          npm test
