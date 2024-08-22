@@ -56,8 +56,7 @@ describe('Create new User', () => {
   const connectWithRetry = async (retries = 5, delay = 2000) => {
     for (let i = 0; i < retries; i++) {
       try {
-        // await mongoose.connect(process.env.TEST_DB);
-        await mongoose.connect("mongodb+srv://myname:pass123@cluster0.zr4z4es.mongodb.net/EcommerceTest?retryWrites=true&w=majority&appName=Cluster0");
+        await mongoose.connect(process.env.TEST_DB);
         console.log('Connected to Test Database');
         return;
       } catch (err) {
