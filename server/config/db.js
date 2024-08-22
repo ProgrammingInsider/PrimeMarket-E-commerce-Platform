@@ -1,11 +1,17 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+dotenv.config({ path: '.env.test' });
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URL_PROD, {
-  serverSelectionTimeoutMS: 40000, // Timeout after 5 seconds for server selection
-  socketTimeoutMS: 45000, // Timeout after 45 seconds for socket operations
+// mongoose.connect(process.env.MONGO_URL_PROD, {
+//   serverSelectionTimeoutMS: 40000,
+//   socketTimeoutMS: 45000,
+// });
+
+mongoose.connect(process.env.TEST_DB, {
+  serverSelectionTimeoutMS: 40000,
+  socketTimeoutMS: 45000,
 });
 
 const conn = mongoose.connection;
