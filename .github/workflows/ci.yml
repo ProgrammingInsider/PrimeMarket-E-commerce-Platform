@@ -56,9 +56,10 @@ jobs:
           (cd ./server && npm start) &
           (cd ./client && npm run dev) &
       
-      # - name: 'Wait for Services'
-      #   run: |
-      #     wait-on http://localhost:5000 http://localhost:5173
+      - name: 'Wait for Backend and Frontend'
+        run: |
+          wait-on http://localhost:5000
+          wait-on http://localhost:5173
 
       - name: 'Run End-to-End Tests'
         working-directory: ./client
