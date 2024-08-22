@@ -23,6 +23,9 @@ jobs:
       ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
       REFRESH_TOKEN_SECRET: ${{ secrets.REFRESH_TOKEN_SECRET }}
       TEST_DB: ${{ secrets.TEST_DB }}
+      VITE_BASE_URL: ${{ secrets.VITE_BASE_URL }}
+      VITE_APP_EMAIL: ${{ secrets.VITE_APP_EMAIL }}
+      VITE_APP_PASSWORD: ${{ secrets.VITE_APP_PASSWORD }}
 
     steps:
       - name: 'Checkout Repository'
