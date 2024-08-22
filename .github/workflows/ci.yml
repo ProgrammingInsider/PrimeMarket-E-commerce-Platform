@@ -62,8 +62,8 @@ jobs:
       
       - name: 'Wait for Backend and Frontend'
         run: |
-          wait-on --timeout=120000 http://localhost:5000
           wait-on --timeout=120000 http://localhost:5173
+          wait-on --timeout=120000 http://localhost:5000
     
       - name: 'Debug Environment Variables'
         run: |
