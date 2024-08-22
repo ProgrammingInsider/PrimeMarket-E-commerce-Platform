@@ -58,4 +58,6 @@ jobs:
       #     wait-on http://localhost:5000 http://localhost:5173
 
       - name: 'Run End-to-End Tests'
+        working-directory: ./client
         run: npx cypress run
+

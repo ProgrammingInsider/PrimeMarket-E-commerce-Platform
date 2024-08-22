@@ -157,8 +157,7 @@ describe("Cart Page", () => {
     inStock.forEach((item) => {
       expect(item).not.toBeInTheDocument();
     });
-
-    screen.debug();
+    
   });
 
   it("Should increase and decrease quantity when the user click on minus and plus", async () => {
