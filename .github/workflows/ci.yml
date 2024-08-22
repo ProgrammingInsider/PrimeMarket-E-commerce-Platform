@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+  pull_request:
+    branches:
+      - main
+
 jobs:
   test:
     name: 'Run Tests'
@@ -58,10 +62,16 @@ jobs:
       
       - name: 'Wait for Backend and Frontend'
         run: |
-          wait-on http://localhost:5000
-          wait-on http://localhost:5173
+          wait-on --timeout=120000 http://localhost:5000
+          wait-on --timeout=120000 http://localhost:5173
+    
+      - name: 'Debug Environment Variables'
+        run: |
+          echo "VITE_APP_EMAIL=$VITE_APP_EMAIL"
+          echo "VITE_APP_PASSWORD=$VITE_APP_PASSWORD"
 
       - name: 'Run End-to-End Tests'
         working-directory: ./client
-        run: npx cypress run
+        run: |
+          npx cypress run
 
