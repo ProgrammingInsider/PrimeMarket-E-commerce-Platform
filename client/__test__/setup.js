@@ -5,6 +5,7 @@ import { vi } from "vitest";
 beforeEach(() => {
   vi.restoreAllMocks();
 });
+
 afterEach(() => {
   vi.clearAllMocks();
 });
