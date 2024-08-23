@@ -22,7 +22,7 @@ const cartSchema = new mongoose.Schema(
       type: String,
       required: true,
       default: 'active',
-      enum: ['active', 'inactive', 'checkout'], 
+      enum: ['active', 'inactive', 'checkout'],
     },
   },
   {

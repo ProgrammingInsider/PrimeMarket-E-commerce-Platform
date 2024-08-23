@@ -181,14 +181,12 @@ export const updateBannerFromCloudinary = async (req, res) => {
     throw new NotFoundError('User Not Found');
   }
 
-  res
-    .status(StatusCodes.OK)
-    .json({
-      status: true,
-      message: 'Banner Picture updated',
-      url: imageUrl,
-      publicId: publicId,
-    });
+  res.status(StatusCodes.OK).json({
+    status: true,
+    message: 'Banner Picture updated',
+    url: imageUrl,
+    publicId: publicId,
+  });
 };
 
 // Update Profile Picture and Upload an Image on Cloudinary
@@ -222,14 +220,12 @@ export const updateProfilePicFromCloudinary = async (req, res) => {
     throw new NotFoundError('User Not Found');
   }
 
-  res
-    .status(StatusCodes.OK)
-    .json({
-      status: true,
-      message: 'Profile Picture updated',
-      url: imageUrl,
-      publicId: publicId,
-    });
+  res.status(StatusCodes.OK).json({
+    status: true,
+    message: 'Profile Picture updated',
+    url: imageUrl,
+    publicId: publicId,
+  });
 };
 
 // Delete Product From Cloudinary

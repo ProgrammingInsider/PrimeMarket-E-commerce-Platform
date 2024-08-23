@@ -192,8 +192,8 @@ const PostProductPage = () => {
     }
 
     try {
-      for(const [key,value] of formData.entries()){
-        console.log(key+' '+value);
+      for (const [key, value] of formData.entries()) {
+        console.log(key + " " + value);
       }
       setLoading(true);
       const { data } = await axiosPrivate.post(

@@ -18,7 +18,7 @@ const categorySchema = new mongoose.Schema(
     parent_category: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Category',
-      default: null, 
+      default: null,
     },
     image_url: {
       type: String,
@@ -42,6 +42,6 @@ const categorySchema = new mongoose.Schema(
     },
   },
   { timestamps: true }
-); 
+);
 
 export default mongoose.model('Category', categorySchema);

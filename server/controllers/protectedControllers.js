@@ -33,13 +33,11 @@ export const productDetail = async (req, res) => {
     throw new BadRequestError('User Not Found');
   }
 
-  res
-    .status(StatusCodes.OK)
-    .json({
-      status: true,
-      result: { ...fetchedProduct, ...fetchedUser },
-      role: roles[position],
-    });
+  res.status(StatusCodes.OK).json({
+    status: true,
+    result: { ...fetchedProduct, ...fetchedUser },
+    role: roles[position],
+  });
 };
 
 export const userProfile = async (req, res) => {

@@ -161,7 +161,7 @@ export const refreshToken = async (req, res) => {
         userId: _id,
         firstname,
         lastname,
-        accessToken
+        accessToken,
       });
     } catch (error) {
       throw new ForbiddenError('Forbidden Request');

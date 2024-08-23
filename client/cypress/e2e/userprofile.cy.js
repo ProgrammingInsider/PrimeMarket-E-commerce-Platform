@@ -2,7 +2,6 @@
 
 describe("Home Page", () => {
   beforeEach(() => {
-
     // Load categories fixture
     cy.fixture("userprofile.json").then((user) => {
       cy.intercept(

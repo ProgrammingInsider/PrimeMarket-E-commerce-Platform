@@ -66,7 +66,7 @@ const productSchema = new mongoose.Schema(
       type: String,
       trim: true,
       unique: true,
-      maxlength: 50
+      maxlength: 50,
     },
     weight: {
       type: Number,

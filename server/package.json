@@ -9,11 +9,15 @@
     "test:integration": "jest --testpathpattern=src/integration --runInBand",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "lint": "eslint . --ext .js",
-    "lint:fix": "eslint . --ext .js --fix",
+    "lint": "eslint --config eslint.config.js .",
+    "lint:fix": "eslint --config eslint.config.js . --fix",
     "format": "prettier --write ."
   },
-  "keywords": ["e-commerce", "mern", "backend"],
+  "keywords": [
+    "e-commerce",
+    "mern",
+    "backend"
+  ],
   "author": "Amanuel Abera Kedida",
   "license": "MIT",
   "dependencies": {
@@ -40,9 +44,11 @@
     "@babel/core": "^7.24.6",
     "@babel/preset-env": "^7.24.6",
     "@eslint/js": "^9.4.0",
-    "eslint": "^9.4.0",
+    "eslint": "^9.9.0",
+    "eslint-config-eslint": "^11.0.0",
+    "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.4.0",
     "jest": "^29.7.0",
     "nodemon": "^3.1.1",

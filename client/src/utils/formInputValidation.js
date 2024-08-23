@@ -131,7 +131,7 @@ export const updateUserValidation = z.object({
     })
     .refine((val) => !val || /^[A-Za-z0-9\s-]{3,10}$/.test(val), {
       message: "Postal Code must be valid",
-    }),    
+    }),
 
   country: z
     .string()

@@ -78,7 +78,7 @@ jobs:
           npx cypress run
 
   lint:
-    name: 'Run linter'
+    name: 'Run linter & Prettier'
     runs-on: ubuntu-latest
 
     steps:
@@ -90,14 +90,15 @@ jobs:
         with:
           node-version: 20.11.1
 
-      - name: 'Install Frontend Dependencies & Run Linter'
+      - name: 'Install Frontend Dependencies & Run Linter & Prettier'
         working-directory: ./client
         run: |
           npm install
           npm run lint:fix
+          npm run format
 
-      - name: 'Install Backend Dependencies $ Run Linter'
+      - name: 'Install Backend Dependencies & Run Prettier Format'
         working-directory: ./server
         run: |
           npm install
-          npm run lint:fix
+          npm run format

@@ -74,62 +74,62 @@ const CartItem = ({ item = {}, id, qty, dispatch }) => {
   }
 
   return (
-    (stock!== 0) && (
+    stock !== 0 && (
       <div className={styles.item}>
-      <div className={styles.itemImage}>
-        <Link to={`/product/${item?._id}`}>
-          <img src={item?.imageUrl} alt={item?.name} />
-        </Link>
-      </div>
-      <div className={styles.itemDescContainer}>
-        <div className={styles.itemDesc}>
-          <span
-            className={
-              stock > 0
-                ? `${styles.itemAvailability} ${styles.inStock}`
-                : `${styles.itemAvailability} ${styles.outOfStock}`
-            }
-          >
-            {stock > 0 ? "In Stock" : "Out Of Stock"}
-          </span>
+        <div className={styles.itemImage}>
+          <Link to={`/product/${item?._id}`}>
+            <img src={item?.imageUrl} alt={item?.name} />
+          </Link>
+        </div>
+        <div className={styles.itemDescContainer}>
+          <div className={styles.itemDesc}>
+            <span
+              className={
+                stock > 0
+                  ? `${styles.itemAvailability} ${styles.inStock}`
+                  : `${styles.itemAvailability} ${styles.outOfStock}`
+              }
+            >
+              {stock > 0 ? "In Stock" : "Out Of Stock"}
+            </span>
 
-          <h1 className={styles.itemName}>{item?.name}</h1>
-          <ProductRate
-            averageRating={item?.averageRating}
-            ratingCount={item?.ratingCount}
-          />
-          <p className={styles.itemPrice}>${item?.price}</p>
-          <button
-            className={`${styles.itemRemoveBtn} ${styles.cartBtn}`}
-            onClick={removeCartItem}
-            data-testid={`removeBtn${item?._id}`}
-          >
-            {loading ? <CircleLoader /> : "Remove from cart"}
-          </button>
-        </div>
-        <div className={styles.quantityAdjustment}>
-          <FaMinus
-            className={styles.cartIcon}
-            onClick={() => handleQuantity("minus")}
-            data-testid={`minus${item?._id}`}
-          />
-          <input
-            type="number"
-            value={quantity}
-            onChange={handleInputChange}
-            className={styles.itemQuantity}
-            min={1}
-            max={stock}
-            aria-label={`quantity-${item?._id}`}
-          />
-          <FaPlus
-            className={styles.cartIcon}
-            onClick={() => handleQuantity("plus")}
-            data-testid={`plus${item?._id}`}
-          />
+            <h1 className={styles.itemName}>{item?.name}</h1>
+            <ProductRate
+              averageRating={item?.averageRating}
+              ratingCount={item?.ratingCount}
+            />
+            <p className={styles.itemPrice}>${item?.price}</p>
+            <button
+              className={`${styles.itemRemoveBtn} ${styles.cartBtn}`}
+              onClick={removeCartItem}
+              data-testid={`removeBtn${item?._id}`}
+            >
+              {loading ? <CircleLoader /> : "Remove from cart"}
+            </button>
+          </div>
+          <div className={styles.quantityAdjustment}>
+            <FaMinus
+              className={styles.cartIcon}
+              onClick={() => handleQuantity("minus")}
+              data-testid={`minus${item?._id}`}
+            />
+            <input
+              type="number"
+              value={quantity}
+              onChange={handleInputChange}
+              className={styles.itemQuantity}
+              min={1}
+              max={stock}
+              aria-label={`quantity-${item?._id}`}
+            />
+            <FaPlus
+              className={styles.cartIcon}
+              onClick={() => handleQuantity("plus")}
+              data-testid={`plus${item?._id}`}
+            />
+          </div>
         </div>
       </div>
-    </div>
     )
   );
 };

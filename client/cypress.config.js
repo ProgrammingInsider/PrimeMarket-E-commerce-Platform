@@ -13,8 +13,8 @@ export default defineConfig({
       "**/test-to-ignore.spec.js",
       "**/*.md",
     ],
-    viewportHeight: 1080,  // Fix the viewportHeight value
-    viewportWidth: 1920,   // Fix the viewportWidth value
+    viewportHeight: 1080, // Fix the viewportHeight value
+    viewportWidth: 1920, // Fix the viewportWidth value
     defaultCommandTimeout: 10000, // Timeout for cy.get(), cy.contains(), etc.
     requestTimeout: 10000, // Timeout for network requests
     responseTimeout: 10000, // Timeout for waiting for responses

@@ -16,7 +16,7 @@ const useAxiosPrivate = () => {
         }
         return config;
       },
-      (error) => Promise.reject(error)
+      (error) => Promise.reject(error),
     );
 
     const responseIntercept = axiosPrivate.interceptors.response.use(
@@ -52,20 +52,30 @@ const useAxiosPrivate = () => {
               return axiosPrivate(prevRequest);
             } else {
               // Handle refresh failure (e.g., redirect to login)
-              setAuth({ accessToken: "", firstname: "", lastname: "", userId: "" });
+              setAuth({
+                accessToken: "",
+                firstname: "",
+                lastname: "",
+                userId: "",
+              });
               setIsRefreshing(false);
               return Promise.reject(error);
             }
           } catch (refreshError) {
             // Handle refresh error
-            setAuth({ accessToken: "", firstname: "", lastname: "", userId: "" });
+            setAuth({
+              accessToken: "",
+              firstname: "",
+              lastname: "",
+              userId: "",
+            });
             setIsRefreshing(false);
             return Promise.reject(refreshError);
           }
         }
 
         return Promise.reject(error);
-      }
+      },
     );
 
     return () => {

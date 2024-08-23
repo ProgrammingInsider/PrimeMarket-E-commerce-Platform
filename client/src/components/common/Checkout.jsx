@@ -8,7 +8,7 @@ const Checkout = ({ cartItems }) => {
   useEffect(() => {
     // Calculate subtotal
     const newSubTotal = cartItems.reduce(
-      (acc, item) => acc + ((item?.product?.price || 0) * (item?.quantity || 0)),
+      (acc, item) => acc + (item?.product?.price || 0) * (item?.quantity || 0),
       0,
     );
     setSubTotal(newSubTotal);

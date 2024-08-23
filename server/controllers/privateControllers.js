@@ -225,14 +225,12 @@ export const getCart = async (req, res) => {
   const fetchedCarts = await Cart.find({ userid: userId }).lean();
 
   if (!fetchedCarts || fetchedCarts.length === 0) {
-    return res
-      .status(StatusCodes.OK)
-      .json({
-        status: true,
-        message: 'No items in cart',
-        length: 0,
-        result: [],
-      });
+    return res.status(StatusCodes.OK).json({
+      status: true,
+      message: 'No items in cart',
+      length: 0,
+      result: [],
+    });
   }
 
   // Extract product IDs from cart items

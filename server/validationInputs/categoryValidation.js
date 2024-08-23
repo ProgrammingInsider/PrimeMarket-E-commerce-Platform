@@ -5,7 +5,7 @@ export const categoryValidation = [
   body('category_name').notEmpty().withMessage('Category Name is required'),
   body('slug').notEmpty().withMessage('Slug is required'),
   body('description').notEmpty().withMessage('Description is required'),
-  body('parent_category').optional(), 
+  body('parent_category').optional(),
   body('image_url')
     .optional()
     .isURL()
@@ -13,7 +13,7 @@ export const categoryValidation = [
     .withMessage('Image URL must be valid'), // Assuming image_url should be a valid URL
   body('depth_level').notEmpty().withMessage('Depth Level is required'),
   body('path').notEmpty().withMessage('Path is required'),
-  body('metadata').optional(), 
+  body('metadata').optional(),
   body('is_active')
     .optional()
     .isBoolean()
