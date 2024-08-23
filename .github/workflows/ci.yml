@@ -61,21 +61,11 @@ jobs:
           npm start > server.log 2>&1 &
           echo "Started backend"
 
-      # - name: 'Wait for Backend'
-      #   run: |
-      #     wait-on --timeout=120000 http://localhost:5000
-      #     echo "Backend is up"
-
       - name: 'Start Frontend'
         run: |
           cd ./client
           npm run dev > frontend.log 2>&1 &
           echo "Started frontend"
-
-      # - name: 'Wait for Frontend'
-      #   run: |
-      #     wait-on --timeout=120000 http://localhost:5173
-      #     echo "Frontend is up"
 
       - name: 'Debug Environment Variables'
         run: |
@@ -86,3 +76,28 @@ jobs:
         working-directory: ./client
         run: |
           npx cypress run
+
+  lint:
+    name: 'Run linter'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v2
+
+      - name: 'Install Node.js'
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.11.1
+
+      - name: 'Install Frontend Dependencies & Run Linter'
+        working-directory: ./client
+        run: |
+          npm install
+          npm run lint:fix
+
+      - name: 'Install Backend Dependencies $ Run Linter'
+        working-directory: ./server
+        run: |
+          npm install
+          npm run lint:fix

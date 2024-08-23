@@ -2,7 +2,8 @@ export const ratesReducer = (state, action) => {
   switch (action.type) {
     case "FETCH":
       return action.comments;
-    case "UPDATE":
+      
+    case "UPDATE": {
       const existingCommentIndex = state.findIndex(
         (comment) => comment.user._id === action.id,
       );
@@ -15,6 +16,7 @@ export const ratesReducer = (state, action) => {
       } else {
         return [{ ...action.addComment, updatedAt: "Now" }, ...state];
       }
+    }
 
     default:
       return state;
