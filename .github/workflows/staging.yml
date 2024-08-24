@@ -58,19 +58,19 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{"branch": "staging", "auto_deploy": true}'
 
-      - name: 'Update Pull Request'
-        uses: actions/github-script@v5
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const prNumber = ${{ github.event.inputs.PR_number }};
-            const commentBody = `The staging environment has been updated successfully for PR #${prNumber}.`;
-            await github.rest.issues.createComment({
-              issue_number: prNumber,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: commentBody
-            });
+      # - name: 'Update Pull Request'
+      #   uses: actions/github-script@v5
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     script: |
+      #       const prNumber = ${{ github.event.inputs.PR_number }};
+      #       const commentBody = `The staging environment has been updated successfully for PR #${prNumber}.`;
+      #       await github.rest.issues.createComment({
+      #         issue_number: prNumber,
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #         body: commentBody
+      #       });
 
       - name: 'Setup tmate session'
         if: ${{ failure() }}
