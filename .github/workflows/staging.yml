@@ -1,0 +1,77 @@
+name: Create Staging Environment on Render
+
+on:
+  workflow_dispatch:
+    inputs:
+      PR_number:
+        description: 'Pull request number'
+        required: true
+
+jobs:
+  deploy:
+    name: 'Deploy to Staging on Render'
+    runs-on: ubuntu-latest
+
+    env:
+      RENDER_CLIENT_SERVICE_ID: ${{ secrets.RENDER_CLIENT_SERVICE_ID }}
+      RENDER_SERVER_SERVICE_ID: ${{ secrets.RENDER_SERVER_SERVICE_ID }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      RENDER_API_TOKEN: ${{ secrets.RENDER_API_TOKEN }}
+
+    steps:
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v2
+
+      - name: 'Set up Node.js'
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: 'Install Dependencies'
+        run: |
+          cd ./client
+          npm install
+          cd ../server
+          npm install
+
+      - name: 'Build Frontend'
+        run: |
+          cd ./client
+          npm run build
+
+      - name: 'Deploy Frontend to Render'
+        run: |
+          curl -X POST https://api.render.com/v1/services/${{ env.RENDER_CLIENT_SERVICE_ID }}/deploys \
+            -H "Authorization: Bearer ${{ env.RENDER_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"branch": "staging", "auto_deploy": true}'
+
+      - name: 'Build Backend'
+        run: |
+          cd ./server
+          npm run build
+
+      - name: 'Deploy Backend to Render'
+        run: |
+          curl -X POST https://api.render.com/v1/services/${{ env.RENDER_SERVER_SERVICE_ID }}/deploys \
+            -H "Authorization: Bearer ${{ env.RENDER_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"branch": "staging", "auto_deploy": true}'
+
+      - name: 'Update Pull Request'
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = ${{ github.event.inputs.PR_number }};
+            const commentBody = `The staging environment has been updated successfully for PR #${prNumber}.`;
+            await github.rest.issues.createComment({
+              issue_number: prNumber,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: commentBody
+            });
+
+      - name: 'Setup tmate session'
+        if: ${{ failure() }}
+        uses: mxschmitt/action-tmate@v3
