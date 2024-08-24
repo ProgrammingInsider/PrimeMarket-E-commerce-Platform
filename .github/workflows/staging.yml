@@ -46,10 +46,10 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{"branch": "staging", "auto_deploy": true}'
 
-      - name: 'Build Backend'
-        run: |
-          cd ./server
-          npm run build
+      # - name: 'Build Backend'
+      #   run: |
+      #     cd ./server
+      #     npm run build
 
       - name: 'Deploy Backend to Render'
         run: |
