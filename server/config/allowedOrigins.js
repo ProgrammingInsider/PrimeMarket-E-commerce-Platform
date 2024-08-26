@@ -4,7 +4,7 @@ const allowedOrigins = [
   'https://primemarket.vercel.app/',
   'https://prime-market-e-commerce-platform-5mkl8dt2l.vercel.app/',
   'https://primemarket-e-commerce-platform-1.onrender.com',
-  'https://primemarket-client.onrender.com'
+  'https://primemarket-client-bubt.onrender.com'
 ];
 
 export default allowedOrigins;

@@ -39,12 +39,18 @@ jobs:
           cd ./client
           npm run build
 
-      - name: 'Deploy Frontend to Render'
-        run: |
-          curl -X POST https://api.render.com/v1/services/${{ env.RENDER_CLIENT_SERVICE_ID }}/deploys \
-            -H "Authorization: Bearer ${{ env.RENDER_API_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            -d '{"branch": "staging", "auto_deploy": true}'
+      - name: 'Deploy Frontend to Render on https://primemarket-client-bubt.onrender.com/'
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ env.RENDER_CLIENT_SERVICE_ID }}
+          api-key: ${{ env.RENDER_API_TOKEN }}
+
+      # - name: 'Deploy Frontend to Render'
+      #   run: |
+      #     curl -X POST https://api.render.com/v1/services/${{ env.RENDER_CLIENT_SERVICE_ID }}/deploys \
+      #       -H "Authorization: Bearer ${{ env.RENDER_API_TOKEN }}" \
+      #       -H "Content-Type: application/json" \
+      #       -d '{"branch": "staging", "auto_deploy": true}'
 
       # - name: 'Build Backend'
       #   run: |
@@ -52,11 +58,17 @@ jobs:
       #     npm run build
 
       - name: 'Deploy Backend to Render'
-        run: |
-          curl -X POST https://api.render.com/v1/services/${{ env.RENDER_SERVER_SERVICE_ID }}/deploys \
-            -H "Authorization: Bearer ${{ env.RENDER_API_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            -d '{"branch": "staging", "auto_deploy": true}'
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ env.RENDER_SERVER_SERVICE_ID }}
+          api-key: ${{ env.RENDER_API_TOKEN }}
+
+      # - name: 'Deploy Backend to Render'
+      #   run: |
+      #     curl -X POST https://api.render.com/v1/services/${{ env.RENDER_SERVER_SERVICE_ID }}/deploys \
+      #       -H "Authorization: Bearer ${{ env.RENDER_API_TOKEN }}" \
+      #       -H "Content-Type: application/json" \
+      #       -d '{"branch": "staging", "auto_deploy": true}'
 
       # - name: 'Update Pull Request'
       #   uses: actions/github-script@v5
