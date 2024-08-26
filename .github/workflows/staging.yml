@@ -15,7 +15,6 @@ jobs:
     env:
       RENDER_CLIENT_SERVICE_ID: ${{ secrets.RENDER_CLIENT_SERVICE_ID }}
       RENDER_SERVER_SERVICE_ID: ${{ secrets.RENDER_SERVER_SERVICE_ID }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       RENDER_API_TOKEN: ${{ secrets.RENDER_API_TOKEN }}
 
     steps:
