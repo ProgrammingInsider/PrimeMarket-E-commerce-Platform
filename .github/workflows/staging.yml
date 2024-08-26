@@ -40,7 +40,7 @@ jobs:
           cd ./client
           npm run build
 
-      - name: 'Deploy Frontend to Render on https://primemarket-client-bubt.onrender.com/'
+      - name: 'Deploy Frontend to Render'
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
           service-id: ${{ env.RENDER_CLIENT_SERVICE_ID }}
