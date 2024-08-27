@@ -1,80 +1,3 @@
-# name: Create Staging Environment on Render
-
-# on:
-#   workflow_dispatch:
-#     inputs:
-#       PR_number:
-#         description: 'Pull request number'
-#         required: true
-
-# jobs:
-#   Create:
-#     name: 'Create Staging and deploy'
-#     runs-on: ubuntu-latest
-
-#     env:
-#       RENDER_CLIENT_SERVICE_ID: ${{ secrets.RENDER_CLIENT_SERVICE_ID }}
-#       RENDER_SERVER_SERVICE_ID: ${{ secrets.RENDER_SERVER_SERVICE_ID }}
-#       RENDER_API_TOKEN: ${{ secrets.RENDER_API_TOKEN }}
-
-#     steps:
-#       - name: Verify Pull Request Number
-#         uses: actions/github-script@v5
-#         id: verify_pr_number
-#         with:
-#           github-token: ${{ secrets.GITHUB_TOKEN }}
-#           result-encoding: string
-#           script: |
-#             const response = await github.rest.pulls.get({
-#               owner: context.repo.owner,
-#               repo: context.repo.repo,
-#               pull_number: ${{ github.event.inputs.PR_number }}
-#             });
-            
-#             if (response.data.state !== 'open') {
-#               throw new Error('Pull request is not open or number is not valid!');
-#             }
-#             return response.data.head.ref;
-
-#       - name: 'Checkout PR branch'
-#         uses: actions/checkout@v2
-#         with:
-#           ref: ${{ steps.verify_pr_number.outputs.result }}
-
-#       - name: 'Set up Node.js'
-#         uses: actions/setup-node@v3
-#         with:
-#           node-version: 20.x
-
-#       - name: 'Install Dependencies'
-#         run: |
-#           cd ./client
-#           npm install
-#           cd ../server
-#           npm install
-
-#       - name: 'Build Frontend'
-#         run: |
-#           cd ./client
-#           npm run build
-
-#       - name: 'Deploy Frontend to Render'
-#         uses: johnbeynon/render-deploy-action@v0.0.8
-#         with:
-#           service-id: ${{ env.RENDER_CLIENT_SERVICE_ID }}
-#           api-key: ${{ env.RENDER_API_TOKEN }}
-
-#       - name: 'Deploy Backend to Render'
-#         uses: johnbeynon/render-deploy-action@v0.0.8
-#         with:
-#           service-id: ${{ env.RENDER_SERVER_SERVICE_ID }}
-#           api-key: ${{ env.RENDER_API_TOKEN }}
-
-#       - name: 'Setup tmate session'
-#         if: ${{ failure() }}
-#         uses: mxschmitt/action-tmate@v3
-
-
 name: Create Staging Environment on Render
 
 on:
@@ -114,7 +37,7 @@ jobs:
 
       # Checkout the PR branch
       - name: 'Checkout PR Branch'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: ${{ steps.verify_pr_number.outputs.result }}
 
@@ -156,3 +79,5 @@ jobs:
       - name: 'Setup tmate session'
         if: ${{ failure() }}
         uses: mxschmitt/action-tmate@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
