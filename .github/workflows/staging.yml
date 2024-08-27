@@ -49,14 +49,6 @@ jobs:
           ref: ${{ env.BRANCH_NAME }}
           fetch-depth: 0
 
-      - name: Print File Tree
-        run: |
-          ls -R ./client
-
-      - name: Check Build Output
-        run: |
-          cat ./client/build/index.html
-
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -73,6 +65,14 @@ jobs:
         run: |
           cd ./client
           npm run build
+
+      - name: Print File Tree
+        run: |
+          ls -R ./client
+  
+      - name: Check Build Output
+        run: |
+          cat ./client/build/index.html
 
       - name: Deploy Frontend to Render
         uses: johnbeynon/render-deploy-action@v0.0.8
