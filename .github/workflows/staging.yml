@@ -35,6 +35,11 @@ jobs:
             }
             return response.data.head.ref;
 
+      # Debug Branch Name
+      - name: Debug Branch Name
+        run: |
+          echo "Branch Name: ${{ steps.verify_pr_number.outputs.result }}"
+
       # Checkout the PR branch
       - name: 'Checkout PR Branch'
         uses: actions/checkout@v3
