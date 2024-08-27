@@ -40,11 +40,17 @@ jobs:
         run: |
           echo "Branch Name: ${{ steps.verify_pr_number.outputs.result }}"
 
+      # Clean Branch Name
+      - name: Clean Branch Name
+        id: clean_branch_name
+        run: |
+          echo "BRANCH_NAME=${{ steps.verify_pr_number.outputs.result }}" >> $GITHUB_ENV
+
       # Checkout the PR branch
       - name: 'Checkout PR Branch'
         uses: actions/checkout@v3
         with:
-          ref: ${{ steps.verify_pr_number.outputs.result }}
+          ref: ${{ env.BRANCH_NAME }}
           fetch-depth: 0
 
       # Set up Node.js environment
