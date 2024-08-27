@@ -21,7 +21,7 @@ jobs:
       - name: 'Checkout Repository'
         uses: actions/checkout@v2
         with:
-          ref: refs/pull/${{ github.event.inputs.PR_number }}/merge # Checkout the PR branch
+          ref: refs/pull/${{ github.event.inputs.PR_number }}/head
 
       - name: 'Set up Node.js'
         uses: actions/setup-node@v3
