@@ -18,7 +18,6 @@ jobs:
       RENDER_API_TOKEN: ${{ secrets.RENDER_API_TOKEN }}
 
     steps:
-      # Verify that the pull request number is valid and open
       - name: Verify Pull Request Number
         uses: actions/github-script@v5
         id: verify_pr_number
@@ -35,59 +34,58 @@ jobs:
             }
             return response.data.head.ref;
 
-      # Debug Branch Name
       - name: Debug Branch Name
         run: |
           echo "Branch Name: ${{ steps.verify_pr_number.outputs.result }}"
 
-      # Clean Branch Name
       - name: Clean Branch Name
         id: clean_branch_name
         run: |
           echo "BRANCH_NAME=${{ steps.verify_pr_number.outputs.result }}" >> $GITHUB_ENV
 
-      # Checkout the PR branch
-      - name: 'Checkout PR Branch'
+      - name: Checkout PR Branch
         uses: actions/checkout@v3
         with:
           ref: ${{ env.BRANCH_NAME }}
           fetch-depth: 0
 
-      # Set up Node.js environment
-      - name: 'Set up Node.js'
+      - name: Print File Tree
+        run: |
+          ls -R ./client
+
+      - name: Check Build Output
+        run: |
+          cat ./client/build/index.html
+
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20.x
 
-      # Install dependencies for both frontend and backend
-      - name: 'Install Dependencies'
+      - name: Install Dependencies
         run: |
           cd ./client
           npm install
           cd ../server
           npm install
 
-      # Build the frontend project
-      - name: 'Build Frontend'
+      - name: Build Frontend
         run: |
           cd ./client
           npm run build
 
-      # Deploy frontend to Render
-      - name: 'Deploy Frontend to Render'
+      - name: Deploy Frontend to Render
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
           service-id: ${{ env.RENDER_CLIENT_SERVICE_ID }}
           api-key: ${{ env.RENDER_API_TOKEN }}
 
-      # Deploy backend to Render
-      - name: 'Deploy Backend to Render'
+      - name: Deploy Backend to Render
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
           service-id: ${{ env.RENDER_SERVER_SERVICE_ID }}
           api-key: ${{ env.RENDER_API_TOKEN }}
 
-      # SSH Debugging with tmate in case of failure
       - name: 'Setup tmate session'
         if: ${{ failure() }}
         uses: mxschmitt/action-tmate@v3
