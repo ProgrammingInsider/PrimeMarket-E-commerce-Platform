@@ -39,7 +39,7 @@ jobs:
       - name: 'Checkout PR Branch'
         uses: actions/checkout@v3
         with:
-          ref: Amanuel-Abera-patch-4
+          ref: ${{ steps.verify_pr_number.outputs.result }}
 
       # Set up Node.js environment
       - name: 'Set up Node.js'
