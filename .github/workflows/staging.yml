@@ -66,9 +66,13 @@ jobs:
           cd ./client
           npm run build
 
+      - name: Print global.css File Contents
+        run: cat ./client/dist/assets/global.css
+
+
       - name: Verify CSS Change
         run: |
-          grep 'background-color: yellow;' ./client/dist/assets/*.css || echo "Background color change not found in build output"
+          grep 'background-color: yellow;' ./client/dist/assets/global.css || echo "Background color change not found in build output"
 
       - name: Print File Tree
         run: ls -R ./client/dist
