@@ -18,7 +18,7 @@ jobs:
       RENDER_API_TOKEN: ${{ secrets.RENDER_API_TOKEN }}
 
     steps:
-      - name: Verify Pull Request Number
+      - name: Verify The Pull Request Number
         uses: actions/github-script@v5
         id: verify_pr_number
         with:
