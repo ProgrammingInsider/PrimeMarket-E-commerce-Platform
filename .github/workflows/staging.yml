@@ -68,13 +68,13 @@ jobs:
 
       - name: Verify CSS Change
         run: |
-          grep 'background-color: yellow;' ./client/build/static/css/*.css || echo "Background color change not found in build output"
+          grep 'background-color: yellow;' ./client/dist/assets/*.css || echo "Background color change not found in build output"
 
       - name: Print File Tree
-        run: ls -R ./client
+        run: ls -R ./client/dist
 
       - name: Check Build Output
-        run: cat ./client/build/index.html
+        run: cat ./client/dist/index.html
 
       - name: Deploy Frontend to Render
         uses: johnbeynon/render-deploy-action@v0.0.8
