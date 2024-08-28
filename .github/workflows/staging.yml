@@ -67,7 +67,8 @@ jobs:
           npm run build
 
       - name: Verify CSS Change
-        run: grep 'background-color: yellow;' ./client/build/static/css/*.css || echo "Background color change not found in build output"
+        run: |
+          grep 'background-color: yellow;' ./client/build/static/css/*.css || echo "Background color change not found in build output"
 
       - name: Print File Tree
         run: ls -R ./client
